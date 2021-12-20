@@ -21,7 +21,7 @@ from Yukki.YukkiUtilities.database.sudo import (get_sudoers, get_sudoers, remove
 def start_pannel():  
     buttons  = [
             [
-                InlineKeyboardButton(text="📚 Commands", url="https://telegra.ph/RidwanMusic-12-15-2")
+                InlineKeyboardButton(text="🕮 ᴄᴏᴍᴍᴀɴᴅꜱ", url="https://telegra.ph/RidwanMusic-12-15-2")
             ],
             [ 
                 InlineKeyboardButton(text="☕ ᴄʀᴇᴀᴛᴏʀ", url="https://t.me/rdwan_13"),
@@ -34,20 +34,20 @@ pstart_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🔥 𝐀𝐝𝐝 𝐃𝐢 𝐆𝐫𝐨𝐮𝐛 𝐋𝐮 𝐊𝐭𝐋 🔥", url="https://t.me/RdwanMsic_Bot?startgroup=true")
+                        "🌷 ᴀᴅᴅ ᴋᴇ ɢʀᴏᴜᴘ ʟᴜ ɢɪʟᴀ 🌷", url="https://t.me/RdwanMsic_Bot?startgroup=true")
                 ],[
                     InlineKeyboardButton(
-                        "📚 Commands", url="https://telegra.ph/RidwanMusic-12-15-2"),
+                        "🕮 ᴄᴏᴍᴍᴀɴᴅꜱ", url="https://telegra.ph/RidwanMusic-12-15-2"),
                     InlineKeyboardButton(
-                        "♥️ Donate", url="https://t.me/rdwan_13")
+                        "🌵ᴄʀᴇᴀᴛᴏʀ", url="https://t.me/rdwan_13")
                 ],[
                     InlineKeyboardButton(
                         "🌻 ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘꜱ", url="https://t.me/unclesamaja1"), 
                     InlineKeyboardButton(
-                        "📣 ᴄʜᴀɴɴᴇʟ", url="https://t.me/unclesamaja")
+                        "🔔 ᴄʜᴀɴɴᴇʟ", url="https://t.me/unclesamaja")
                 ],[
                     InlineKeyboardButton(
-                        "❓ Setup Guide", url="https://telegra.ph/RidwanMusic-12-15-2")
+                        "Setup Guide", url="https://telegra.ph/RidwanMusic-12-15-2")
                 ]
             ]
         )
@@ -91,7 +91,7 @@ async def play(_, message: Message):
         user_name = message.from_user.first_name
         rpk = "["+user_name+"](tg://user?id="+str(user_id)+")" 
         await app.send_message(message.chat.id,
-            text=f"✨ Welcome {rpk} !\n\n💭 [RdwanMusic](https://t.me/RidwanProject) **allows** you to **play music** on **Groups** through the new **Telegram's video chats** feature !\n\n💡 **Find out** all the **Bot's commands** and how they work by clicking on the » 📚 **Commands** button!",
+            text=f"✨ Welcome {rpk} !\n\n💭 [ʀɪᴅᴡᴀɴ ᴘʀᴏᴊᴇᴄᴛ ᴍᴜꜱɪᴄ](https://t.me/rdwan_13) **allows** you to **play music** on **Groups** through the new **Telegram's video chats** feature !\n\n💡 **Find out** all the **Bot's commands** and how they work by clicking on the » 📚 **Commands** button!",
             parse_mode="markdown",
             reply_markup=pstart_markup,
             reply_to_message_id=message.message_id,
