@@ -21,33 +21,33 @@ from Yukki.YukkiUtilities.database.sudo import (get_sudoers, get_sudoers, remove
 def start_pannel():  
     buttons  = [
             [
-                InlineKeyboardButton(text="📚 Commands", url="https://telegra.ph/Veez-Mega-Bot-09-30")
+                InlineKeyboardButton(text="📚 Commands", url="https://telegra.ph/RidwanMusic-12-15-2")
             ],
             [ 
-                InlineKeyboardButton(text="📣 Channel", url="https://t.me/levinachannel"),
-                InlineKeyboardButton(text="💭 Group", url="https://t.me/VeezSupportGroup")
+                InlineKeyboardButton(text="📣 OWNER", url="https://t.me/rdwan_13"),
+                InlineKeyboardButton(text="💭 Group", url="https://t.me/unclesamaja1")
             ],
     ]
-    return "✨  **Welcome to veez music mega bot.**", buttons
+    return "✨  **Welcome to rdwan music project bot.**", buttons
 
 pstart_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "➕ Add me to a Group ➕", url="https://t.me/VeezMegaBot?startgroup=true")
+                        "➕ Add me to a Group ➕", url="https://t.me/RidwanProject?startgroup=true")
                 ],[
                     InlineKeyboardButton(
-                        "📚 Commands", url="https://telegra.ph/Veez-Mega-Bot-09-30"),
+                        "📚 Commands", url="https://telegra.ph/RidwanMusic-12-15-2"),
                     InlineKeyboardButton(
-                        "♥️ Donate", url="https://t.me/VMDonationBot")
+                        "♥️ Donate", url="https://t.me/rdwan_13")
                 ],[
                     InlineKeyboardButton(
-                        "👥 Official Group", url="https://t.me/VeezSupportGroup"), 
+                        "👥 Official Group", url="https://t.me/unclesamaja1"), 
                     InlineKeyboardButton(
-                        "📣 Official Channel", url="https://t.me/levinachannel")
+                        "📣 Official Channel", url="https://t.me/unclesamaja")
                 ],[
                     InlineKeyboardButton(
-                        "❓ Setup Guide", url="https://telegra.ph/Veez-Mega-Guid-11-19")
+                        "❓ Setup Guide", url="https://telegra.ph/RidwanMusic-12-15-2")
                 ]
             ]
         )
@@ -81,7 +81,7 @@ async def start(_, message: Message):
         await message.reply_text(f"❌ **not in allowed chat**\n\nveez mega is only for allowed chats, ask any sudo user to allow your chat.\n\ncheck sudo user list [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)")
         return await app.leave_chat(chat_id)
     out = start_pannel()
-    await message.reply_text(f"✨ Hello {message.from_user.mention}, i'm a Veez Mega bot.\n\n💭 Make me admin in your group so I can play music, otherwise you can't use my service.", reply_markup=InlineKeyboardMarkup(out[1]))
+    await message.reply_text(f"✨ Hello {message.from_user.mention}, i'm a Rdwn Music bot.\n\n💭 Make me admin in your group so I can play music, otherwise you can't use my service.", reply_markup=InlineKeyboardMarkup(out[1]))
     return
         
 @Client.on_message(filters.private & filters.incoming & filters.command("start"))
@@ -91,7 +91,7 @@ async def play(_, message: Message):
         user_name = message.from_user.first_name
         rpk = "["+user_name+"](tg://user?id="+str(user_id)+")" 
         await app.send_message(message.chat.id,
-            text=f"✨ Welcome {rpk} !\n\n💭 [Veez Mega](https://t.me/VeezMegaBot) **allows** you to **play music** on **Groups** through the new **Telegram's video chats** feature !\n\n💡 **Find out** all the **Bot's commands** and how they work by clicking on the » 📚 **Commands** button!",
+            text=f"✨ Welcome {rpk} !\n\n💭 [RdwanMusic](https://t.me/RidwanProject) **allows** you to **play music** on **Groups** through the new **Telegram's video chats** feature !\n\n💡 **Find out** all the **Bot's commands** and how they work by clicking on the » 📚 **Commands** button!",
             parse_mode="markdown",
             reply_markup=pstart_markup,
             reply_to_message_id=message.message_id,
@@ -120,7 +120,7 @@ async def play(_, message: Message):
 📣 **Channel:** {x["uploader"]}
 🔗 **Link:** {x["webpage_url"]}
 
-⚡️ __Powered by Veez Music Mega AI__"""
+⚡️ __Powered by Rdwan Music Project AI__"""
             link = (x["webpage_url"])
             buttons = personal_markup(link)
             userid = message.from_user.id
