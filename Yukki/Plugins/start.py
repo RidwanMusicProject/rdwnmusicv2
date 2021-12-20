@@ -34,7 +34,7 @@ pstart_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🔥 𝐀𝐝𝐝 𝐃𝐢 𝐆𝐫𝐨𝐮𝐛 𝐋𝐮 𝐊𝐭𝐋 🔥", url="https://t.me/RidwanProject?startgroup=true")
+                        "🔥 𝐀𝐝𝐝 𝐃𝐢 𝐆𝐫𝐨𝐮𝐛 𝐋𝐮 𝐊𝐭𝐋 🔥", url="https://t.me/RdwanMsic_Bot?startgroup=true")
                 ],[
                     InlineKeyboardButton(
                         "📚 Commands", url="https://telegra.ph/RidwanMusic-12-15-2"),
