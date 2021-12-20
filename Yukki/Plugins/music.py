@@ -123,7 +123,7 @@ async def play(_, message: Message):
     if audio:
         fucksemx = 1
         what = "Audio Searched"
-        mystic = await message.reply_text("**🔄 processing audio...**")
+        mystic = await message.reply_text("**🔄 ꜱᴇᴅᴀɴɢ ʟᴏᴀᴅɪɴɢ ᴋᴛʟ...**")
         if audio.file_size > 157286400:
             await mystic.edit_text("audio file size must be less than 150 mb.") 
             return
@@ -154,7 +154,7 @@ async def play(_, message: Message):
     elif url:
         what = "URL Searched"
         query = " ".join(message.command[1:])
-        mystic = await _.send_message(chat_id, "🔍 **Searching...**")
+        mystic = await _.send_message(chat_id, "🔍 **ꜱᴇᴅᴀɴɢ ʟᴏᴀᴅɪɴɢ ᴋᴛʟ...**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = VideosSearch(query, limit=1)
@@ -245,7 +245,7 @@ async def play(_, message: Message):
             return
         what = "Query Given"
         query = " ".join(message.command[1:])
-        mystic = await _.send_message(chat_id, "🔍 **Searching...**")
+        mystic = await _.send_message(chat_id, "🔍 **ꜱᴇᴅᴀɴɢ ʟᴏᴀᴅɪɴɢ ᴋᴛʟ...**")
         try:
             a = VideosSearch(query, limit=5)
             result = (a.result()).get("result")
@@ -272,7 +272,7 @@ async def play(_, message: Message):
         buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
         hmo = await message.reply_photo(
             photo=thumb, 
-            caption=(f"1️⃣ <b>[{title1[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID1})\n └ ⚡ __Powered by Veez Music AI__\n\n2️⃣ <b>[{title2[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID2})\n └ ⚡ __Powered by Veez Music AI__\n\n3️⃣ <b>[{title3[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID3})\n └ ⚡ __Powered by Veez Music AI__\n\n4️⃣ <b>[{title4[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID4})\n └ ⚡ __Powered by Veez Music AI__\n\n5️⃣ <b>[{title5[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID5})\n └ ⚡ __Powered by Veez Music AI__"),    
+            caption=(f"1️⃣ <b>[{title1[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID1})\n └ ⚡ __Powered by HALBERT Music AI__\n\n2️⃣ <b>[{title2[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID2})\n └ ⚡ __Powered by HALBERT Music AI__\n\n3️⃣ <b>[{title3[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID3})\n └ ⚡ __Powered by HALBERT Music AI__\n\n4️⃣ <b>[{title4[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID4})\n └ ⚡ __Powered by HALBERT Music AI__\n\n5️⃣ <b>[{title5[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID5})\n └ ⚡ __Powered by HALBERT Music AI__"),    
             reply_markup=InlineKeyboardMarkup(buttons),
         )  
         disable_web_page_preview=True
@@ -471,7 +471,7 @@ async def startyuplay(_,CallbackQuery):
         m = await CallbackQuery.message.reply_photo(
         photo=thumb,
         reply_markup=InlineKeyboardMarkup(buttons),    
-        caption=(f"🏷 <b>Name:</b> [{title[:75]}]({url}) \n⏱ <b>Duration:</b> `{duration}`\n💡 **Status:** `Playing`\n🎧 **Request by:** {checking}")
+        caption=(f"🏷 <b>Name:</b> [{title[:75]}]({url}) \n⏱ <b>Duration:</b> `{duration}`\n⚡ **POWERED:** `HALBERT`\n🎧 **Request by:** {checking}")
     )   
         os.remove(thumb)
         await CallbackQuery.message.delete()
@@ -530,7 +530,7 @@ async def popat(_, CallbackQuery):
         url = "https://www.youtube.com/watch?v={id}"
         buttons = search_markup2(ID6, ID7, ID8, ID9, ID10, duration6, duration7, duration8, duration9, duration10 ,user_id, query)
         await CallbackQuery.edit_message_text(
-            f"6️⃣ <b>[{title6[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID6})\n └ ⚡ __Powered by Veez Music AI__\n\n7️⃣ <b>[{title7[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID7})\n └ ⚡ __Powered by Veez Music AI__\n\n8️⃣ <b>[{title8[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID8})\n └ ⚡ __Powered by Veez Music AI__\n\n9️⃣ <b>[{title9[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID9})\n └ ⚡ __Powered by Veez Music AI__\n\n🔟 <b>[{title10[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID10})\n └ ⚡ __Powered by Veez Music AI__",    
+            f"6️⃣ <b>[{title6[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID6})\n └ ⚡ __Powered by HALBERT Music AI__\n\n7️⃣ <b>[{title7[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID7})\n └ ⚡ __Powered by HALBERT Music AI__\n\n8️⃣ <b>[{title8[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID8})\n └ ⚡ __Powered by HALBERT Music AI__\n\n9️⃣ <b>[{title9[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID9})\n └ ⚡ __Powered by HALBERT Music AI__\n\n🔟 <b>[{title10[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID10})\n └ ⚡ __Powered by HALBERT Music AI__",    
             reply_markup=InlineKeyboardMarkup(buttons),
         )  
         disable_web_page_preview=True
@@ -539,14 +539,14 @@ async def popat(_, CallbackQuery):
         url = "https://www.youtube.com/watch?v={id}"
         buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
         await CallbackQuery.edit_message_text(
-            f"1️⃣ <b>[{title1[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID1})\n └ ⚡ __Powered by Veez Music AI__\n\n2️⃣ <b>[{title2[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID2})\n └ ⚡ __Powered by Veez Music AI__\n\n3️⃣ <b>[{title3[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID3})\n └ ⚡ __Powered by Veez Music AI__\n\n4️⃣ <b>[{title4[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID4})\n └ ⚡ __Powered by Veez Music AI__\n\n5️⃣ <b>[{title5[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID5})\n └ ⚡ __Powered by Veez Music AI__",    
+            f"1️⃣ <b>[{title1[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID1})\n └ ⚡ __Powered by HALBERT Music AI__\n\n2️⃣ <b>[{title2[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID2})\n └ ⚡ __Powered by HALBERT Music AI__\n\n3️⃣ <b>[{title3[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID3})\n └ ⚡ __Powered by HALBERT Music AI__\n\n4️⃣ <b>[{title4[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID4})\n └ ⚡ __Powered by HALBERT Music AI__\n\n5️⃣ <b>[{title5[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID5})\n └ ⚡ __Powered by HALBERT Music AI__",    
             reply_markup=InlineKeyboardMarkup(buttons),
         )  
         disable_web_page_preview=True
         return
 
 
-@Client.on_message(command(["playplaylist", "playplaylist@VeezMegaBot"]) & other_filters)
+@Client.on_message(command(["playplaylist", "playplaylist@RdwanMsicBot"]) & other_filters)
 async def play_playlist_cmd(_, message):
     thumb ="cache/playlist.png"
     user_id = message.from_user.id
