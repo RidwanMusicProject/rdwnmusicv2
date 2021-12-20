@@ -24,7 +24,7 @@ def start_pannel():
                 InlineKeyboardButton(text="📚 Commands", url="https://telegra.ph/RidwanMusic-12-15-2")
             ],
             [ 
-                InlineKeyboardButton(text="☕ ᴄʀᴇᴀᴛᴏʀ", url=☕https://t.me/rdwan_13"),
+                InlineKeyboardButton(text="☕ ᴄʀᴇᴀᴛᴏʀ", url="https://t.me/rdwan_13"),
                 InlineKeyboardButton(text="💭 ꜱᴜᴘᴘᴏʀᴛ", url="https://t.me/unclesamaja1")
             ],
     ]
