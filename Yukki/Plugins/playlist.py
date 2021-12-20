@@ -38,7 +38,7 @@ from pyrogram.types import (CallbackQuery, InlineKeyboardButton, InlineKeyboardM
 options = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "all","16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30",]   
 
 
-@Client.on_message(command(["playlist", "playlist@VeezMegaBot"]) & other_filters)
+@Client.on_message(command(["playlist", "playlist@RdwanMsic_Bot"]) & other_filters)
 async def pause_cmd(_, message):
     thumb ="cache/playlist.png"
     await message.reply_photo(
@@ -48,7 +48,7 @@ async def pause_cmd(_, message):
     return 
 
 
-@Client.on_message(command(["delmyplaylist", "delmyplaylist@VeezMegaBot"]) & other_filters)
+@Client.on_message(command(["delmyplaylist", "delmyplaylist@RdwanMsic_Bot"]) & other_filters)
 async def delmyplaylist(_, message):
     usage = ("usage:\n\n/delmyplaylist [numbers between 1-30] (to delete a particular music in playlist)\n\n/delmyplaylist all (to delete whole playlist)")
     if len(message.command) < 2:
@@ -63,7 +63,7 @@ async def delmyplaylist(_, message):
     else:
          _playlist = await get_note_names(message.from_user.id)
     if not _playlist:
-        await message.reply_text("you have no playlist on veez mega database !")
+        await message.reply_text("you have no playlist on ridwan project database !")
     else:
         titlex = []
         j = 0
@@ -80,7 +80,7 @@ async def delmyplaylist(_, message):
         await message.reply_text("you have no such music in playlist.")                             
 
 
-@Client.on_message(command(["delchatplaylist", "delchatplaylist@VeezMegaBot"]) & other_filters)
+@Client.on_message(command(["delchatplaylist", "delchatplaylist@RdwanMsic_Bot"]) & other_filters)
 async def delchatplaylist(_, message):
     a = await app.get_chat_member(message.chat.id , message.from_user.id)
     if not a.can_manage_voice_chats:
@@ -98,7 +98,7 @@ async def delchatplaylist(_, message):
     else:
          _playlist = await get_note_names(message.chat.id)
     if not _playlist:
-        await message.reply_text("Group's has no playlist on veez mega database.")
+        await message.reply_text("Group's has no playlist on ridwan project database.")
     else:
         titlex = []
         j = 0
