@@ -24,8 +24,8 @@ def start_pannel():
                 InlineKeyboardButton(text="📚 Commands", url="https://telegra.ph/RidwanMusic-12-15-2")
             ],
             [ 
-                InlineKeyboardButton(text="📣 OWNER", url="https://t.me/rdwan_13"),
-                InlineKeyboardButton(text="💭 Group", url="https://t.me/unclesamaja1")
+                InlineKeyboardButton(text="☕ ᴄʀᴇᴀᴛᴏʀ", url=☕https://t.me/rdwan_13"),
+                InlineKeyboardButton(text="💭 ꜱᴜᴘᴘᴏʀᴛ", url="https://t.me/unclesamaja1")
             ],
     ]
     return "✨  **Welcome to rdwan music project bot.**", buttons
@@ -34,7 +34,7 @@ pstart_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "➕ Add me to a Group ➕", url="https://t.me/RidwanProject?startgroup=true")
+                        "🔥 𝐀𝐝𝐝 𝐃𝐢 𝐆𝐫𝐨𝐮𝐛 𝐋𝐮 𝐊𝐭𝐋 🔥", url="https://t.me/RidwanProject?startgroup=true")
                 ],[
                     InlineKeyboardButton(
                         "📚 Commands", url="https://telegra.ph/RidwanMusic-12-15-2"),
@@ -42,9 +42,9 @@ pstart_markup=InlineKeyboardMarkup(
                         "♥️ Donate", url="https://t.me/rdwan_13")
                 ],[
                     InlineKeyboardButton(
-                        "👥 Official Group", url="https://t.me/unclesamaja1"), 
+                        "🌻 ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘꜱ", url="https://t.me/unclesamaja1"), 
                     InlineKeyboardButton(
-                        "📣 Official Channel", url="https://t.me/unclesamaja")
+                        "📣 ᴄʜᴀɴɴᴇʟ", url="https://t.me/unclesamaja")
                 ],[
                     InlineKeyboardButton(
                         "❓ Setup Guide", url="https://telegra.ph/RidwanMusic-12-15-2")
