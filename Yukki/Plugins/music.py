@@ -52,12 +52,12 @@ def time_to_seconds(time):
     )
 
 
-@Client.on_message(command(["play", "play@VeezMegaBot"]) & other_filters)
+@Client.on_message(command(["play", "play@RdwanMsic_Bot"]) & other_filters)
 async def play(_, message: Message):
     await message.delete()
     chat_id = message.chat.id
     if not await is_served_chat(chat_id):
-        await message.reply_text(f"❌ **not in allowed chat**\n\nveez mega is only for allowed chats. ask any sudo user to allow your chat.\n\ncheck sudo user list [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)")
+        await message.reply_text(f"❌ **not in allowed chat**\n\nhalbert music is only for allowed chats. ask any sudo user to allow your chat.\n\ncheck sudo user list [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)")
         return await app.leave_chat(chat_id)  
     if message.sender_chat:
         return await message.reply_text("you're an __Anonymous__ Admin !\n\n» revert back to user account from admin rights.")  
@@ -272,7 +272,7 @@ async def play(_, message: Message):
         buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
         hmo = await message.reply_photo(
             photo=thumb, 
-            caption=(f"1️⃣ <b>[{title1[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID1})\n └ ⚡ __Powered by HALBERT Music AI__\n\n2️⃣ <b>[{title2[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID2})\n └ ⚡ __Powered by HALBERT Music AI__\n\n3️⃣ <b>[{title3[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID3})\n └ ⚡ __Powered by HALBERT Music AI__\n\n4️⃣ <b>[{title4[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID4})\n └ ⚡ __Powered by HALBERT Music AI__\n\n5️⃣ <b>[{title5[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID5})\n └ ⚡ __Powered by HALBERT Music AI__"),    
+            caption=(f"1️⃣ <b>[{title1[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID1})\n └ ⚡ __Powered by Ridwan Music AI__\n\n2️⃣ <b>[{title2[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID2})\n └ ⚡ __Powered by Ridwan Music AI__\n\n3️⃣ <b>[{title3[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID3})\n └ ⚡ __Powered by Ridwan Music AI__\n\n4️⃣ <b>[{title4[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID4})\n └ ⚡ __Powered by Ridwan Music AI__\n\n5️⃣ <b>[{title5[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID5})\n └ ⚡ __Powered by Ridwan Music AI__"),    
             reply_markup=InlineKeyboardMarkup(buttons),
         )  
         disable_web_page_preview=True
@@ -471,7 +471,7 @@ async def startyuplay(_,CallbackQuery):
         m = await CallbackQuery.message.reply_photo(
         photo=thumb,
         reply_markup=InlineKeyboardMarkup(buttons),    
-        caption=(f"🏷 <b>Name:</b> [{title[:75]}]({url}) \n⏱ <b>Duration:</b> `{duration}`\n⚡ **POWERED:** `HALBERT`\n🎧 **Request by:** {checking}")
+        caption=(f"🏷 <b>Name:</b> [{title[:75]}]({url}) \n⏱ <b>Duration:</b> `{duration}`\n☕ **Powered:** `HALBERT`\n🎧 **Request by:** {checking}")
     )   
         os.remove(thumb)
         await CallbackQuery.message.delete()
@@ -530,7 +530,7 @@ async def popat(_, CallbackQuery):
         url = "https://www.youtube.com/watch?v={id}"
         buttons = search_markup2(ID6, ID7, ID8, ID9, ID10, duration6, duration7, duration8, duration9, duration10 ,user_id, query)
         await CallbackQuery.edit_message_text(
-            f"6️⃣ <b>[{title6[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID6})\n └ ⚡ __Powered by HALBERT Music AI__\n\n7️⃣ <b>[{title7[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID7})\n └ ⚡ __Powered by HALBERT Music AI__\n\n8️⃣ <b>[{title8[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID8})\n └ ⚡ __Powered by HALBERT Music AI__\n\n9️⃣ <b>[{title9[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID9})\n └ ⚡ __Powered by HALBERT Music AI__\n\n🔟 <b>[{title10[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID10})\n └ ⚡ __Powered by HALBERT Music AI__",    
+            f"6️⃣ <b>[{title6[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID6})\n └ ⚡ __Powered by Ridwan Music AI__\n\n7️⃣ <b>[{title7[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID7})\n └ ⚡ __Powered by Ridwan Music AI__\n\n8️⃣ <b>[{title8[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID8})\n └ ⚡ __Powered by Ridwan Music AI__\n\n9️⃣ <b>[{title9[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID9})\n └ ⚡ __Powered by Ridwan Music AI__\n\n🔟 <b>[{title10[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID10})\n └ ⚡ __Powered by Ridwan Music AI__",    
             reply_markup=InlineKeyboardMarkup(buttons),
         )  
         disable_web_page_preview=True
@@ -539,14 +539,14 @@ async def popat(_, CallbackQuery):
         url = "https://www.youtube.com/watch?v={id}"
         buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
         await CallbackQuery.edit_message_text(
-            f"1️⃣ <b>[{title1[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID1})\n └ ⚡ __Powered by HALBERT Music AI__\n\n2️⃣ <b>[{title2[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID2})\n └ ⚡ __Powered by HALBERT Music AI__\n\n3️⃣ <b>[{title3[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID3})\n └ ⚡ __Powered by HALBERT Music AI__\n\n4️⃣ <b>[{title4[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID4})\n └ ⚡ __Powered by HALBERT Music AI__\n\n5️⃣ <b>[{title5[:25]}...]({url})</b>\n ├ 💡 [More information](https://t.me/{BOT_USERNAME}?start=info_{ID5})\n └ ⚡ __Powered by HALBERT Music AI__",    
+            f"1️⃣ <b>[{title1[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID1})\n └ ⚡ __Powered by Ridwan Music AI__\n\n2️⃣ <b>[{title2[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID2})\n └ ⚡ __Powered by Ridwan Music AI__\n\n3️⃣ <b>[{title3[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID3})\n └ ⚡ __Powered by Ridwan Music AI__\n\n4️⃣ <b>[{title4[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID4})\n └ ⚡ __Powered by Ridwan Music AI__\n\n5️⃣ <b>[{title5[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID5})\n └ ⚡ __Powered by Ridwan Music AI__",    
             reply_markup=InlineKeyboardMarkup(buttons),
         )  
         disable_web_page_preview=True
         return
 
 
-@Client.on_message(command(["playplaylist", "playplaylist@RdwanMsicBot"]) & other_filters)
+@Client.on_message(command(["playplaylist", "playplaylist@RdwanMsic_Bot"]) & other_filters)
 async def play_playlist_cmd(_, message):
     thumb ="cache/playlist.png"
     user_id = message.from_user.id
