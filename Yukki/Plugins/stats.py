@@ -48,7 +48,7 @@ async def gstats(_, message):
     free = (hdd.free / (1024.0 ** 3))
     free = str(free)
     msg = f"""
-📊 **Global stats of rdwan prjct bot**:\n
+📊 **Global stats of ridwan project bot**:\n
 ⩥ **System Stats:**\n
 **Uptime:** {uptime}
 **System Proc:** Online
