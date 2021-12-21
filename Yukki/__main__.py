@@ -61,7 +61,7 @@ run()
 idle()
 
 LOGS.info(
-    f"⚡ VEEZ MEGA ⚡ [SUCCESSFULLY ACTIVATED]")
+    f"⚡ RIDWAN MUSIC ZEUS ⚡ [SUCCESSFULLY ACTIVATED]")
 
 loop.close()
 print("[INFO] TURNED OFF BOT AND CLIENT")
