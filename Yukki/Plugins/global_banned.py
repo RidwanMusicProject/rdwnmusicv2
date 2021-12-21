@@ -43,7 +43,7 @@ async def ban_globally(_, message):
                 except Exception:
                     pass    
             ban_text = f"""
-🚷 **new global ban on veez mega**
+🚷 **new global ban on rdwan prjct**
 
 **Origin:** {message.chat.title} [`{message.chat.id}`]
 **Sudo User:** {from_user.mention}
@@ -89,7 +89,7 @@ async def ban_globally(_, message):
                 except Exception:
                     pass    
             ban_text = f"""
-🚷 **new global ban on veez mega**
+🚷 **new global ban on rdwan prjct**
 
 **Origin:** {message.chat.title} [`{message.chat.id}`]
 **Sudo User:** {from_user_mention}
