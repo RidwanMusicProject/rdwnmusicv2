@@ -1,9 +1,9 @@
 {
-    "name": "Veez Mega Bot",
+    "name": "Ridwan Project Bot",
     "logo": "https://telegra.ph/file/9dd9b20abcda2d7bb6725.png",
-    "description": "veez music mega allow you to stream music trought the telegram voice chat feature.",
+    "description": "Ridwan music Project allow you to stream music trought the telegram voice chat feature.",
     "keywords": ["music", "voice chat", "telegram"],
-    "repository": "https://github.com/levina-lab/vmusic",
+    "repository": "https://github.com/RidwanMusicProject/rdwnmusicv2",
     "stack": "container",
     "env": {
         "SESSION_NAME": {
@@ -13,17 +13,17 @@
         "OWNER_ID": {
             "description": "fill with your telegram id as the owner of the bot",
             "required": true,
-            "value": "1757169682"
+            "value": "1359869751"
         },
         "ASS_ID": {
             "description": "fill with telegram id of account 1",
             "required": true,
-            "value": "1727937540"
+            "value": "2135633011"
         },
         "LOG_GROUP_ID": {
             "description": "create a private group and get the group id, add your bot as admin to the group too",
             "required": true,
-            "value": "-1001306851903"
+            "value": "-1001700673613"
         },
         "API_ID": {
             "description": "your Api ID from my.telegram.org/apps",
