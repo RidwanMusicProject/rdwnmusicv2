@@ -21,7 +21,7 @@ from Yukki.YukkiUtilities.database.sudo import (get_sudoers, get_sudoers, remove
 def start_pannel():  
     buttons  = [
             [
-                InlineKeyboardButton(text="🕮 ᴄᴏᴍᴍᴀɴᴅꜱ", url="https://telegra.ph/RidwanMusic-12-15-2")
+                InlineKeyboardButton(text="🚑 ᴄᴏᴍᴍᴀɴᴅꜱ", url="https://telegra.ph/RidwanMusic-12-15-2")
             ],
             [ 
                 InlineKeyboardButton(text="☕ ᴄʀᴇᴀᴛᴏʀ", url="https://t.me/rdwan_13"),
@@ -37,7 +37,7 @@ pstart_markup=InlineKeyboardMarkup(
                         "🌷 ᴀᴅᴅ ᴋᴇ ɢʀᴏᴜᴘ ʟᴜ ɢɪʟᴀ 🌷", url="https://t.me/RdwanMsic_Bot?startgroup=true")
                 ],[
                     InlineKeyboardButton(
-                        "🕮 ᴄᴏᴍᴍᴀɴᴅꜱ", url="https://telegra.ph/RidwanMusic-12-15-2"),
+                        "🚑 ᴄᴏᴍᴍᴀɴᴅꜱ", url="https://telegra.ph/RidwanMusic-12-15-2"),
                     InlineKeyboardButton(
                         "🌵ᴄʀᴇᴀᴛᴏʀ", url="https://t.me/rdwan_13")
                 ],[
@@ -69,7 +69,7 @@ async def welcome(_, message: Message):
                 await remove_active_chat(chat_id)
             if member.id == BOT_ID:
                 out = start_pannel()
-                await message.reply_text(f"❤️ **Thanks for adding me to the group !**\n\n**Promote me as administrator of the group, otherwise I will not be able to work properly.", reply_markup=InlineKeyboardMarkup(out[1]))
+                await message.reply_text(f"❤️ **Thanks for adding me to the group By Halbert !**\n\n**Promote me as administrator of the group, otherwise I will not be able to work properly.", reply_markup=InlineKeyboardMarkup(out[1]))
                 return
         except:
             return
@@ -78,7 +78,7 @@ async def welcome(_, message: Message):
 async def start(_, message: Message):
     chat_id = message.chat.id
     if not await is_served_chat(chat_id):
-        await message.reply_text(f"❌ **not in allowed chat**\n\nridwn music is only for allowed chats, ask any sudo user to allow your chat.\n\ncheck sudo user list [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)")
+        await message.reply_text(f"❌ **not in allowed chat**\n\nridwan music is only for allowed chats, ask any sudo user to allow your chat.\n\ncheck sudo user list [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)")
         return await app.leave_chat(chat_id)
     out = start_pannel()
     await message.reply_text(f"✨ Hello {message.from_user.mention}, i'm a Rdwn Music bot.\n\n💭 Make me admin in your group so I can play music, otherwise you can't use my service.", reply_markup=InlineKeyboardMarkup(out[1]))
