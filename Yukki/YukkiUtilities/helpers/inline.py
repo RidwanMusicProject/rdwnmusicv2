@@ -25,7 +25,7 @@ def others_markup(videoid, user_id):
                 InlineKeyboardButton(text="⏹️", callback_data=f'stopvc2')
             ],
             [
-                InlineKeyboardButton(text="✚ HLBRT Playlist", callback_data=f'playlist {videoid}|{user_id}'),
+                InlineKeyboardButton(text="✚ Rdwan Playlist", callback_data=f'playlist {videoid}|{user_id}'),
                 InlineKeyboardButton(text="✚ Group Playlist", callback_data=f'group_playlist {videoid}|{user_id}')
             ],
             [
