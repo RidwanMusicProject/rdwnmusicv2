@@ -62,9 +62,9 @@ async def welcome(_, message: Message):
     for member in message.new_chat_members:
         try:
             if member.id in OWNER:
-                return await message.reply_text(f"💡 Announcement, My Owner [{member.mention}] has joined this group.")
+                return await message.reply_text(f"💻 Saya Di Kelola Oleh Bos Saya Halbert, My Owner Bot [{member.mention}] has joined this group.")
             if member.id in SUDOERS:
-                return await message.reply_text(f"💡 Announcement, The Sudo member [{member.mention}] has joined this group.")
+                return await message.reply_text(f"💡 Selamat Datang Bos Halbert, The Sudo member [{member.mention}] has joined this group.")
             if member.id == ASSID:
                 await remove_active_chat(chat_id)
             if member.id == BOT_ID:
