@@ -69,7 +69,7 @@ async def welcome(_, message: Message):
                 await remove_active_chat(chat_id)
             if member.id == BOT_ID:
                 out = start_pannel()
-                await message.reply_text(f"❤️ **Thanks for adding me to the group By Halbert !**\n\n**Promote me as administrator of the group, otherwise I will not be able to work properly.", reply_markup=InlineKeyboardMarkup(out[1]))
+                await message.reply_text(f"❤️ **Thanks for adding me to the group. Manager By HALBERT !**\n\n**Promote me as administrator of the group, otherwise I will not be able to work properly.", reply_markup=InlineKeyboardMarkup(out[1]))
                 return
         except:
             return
