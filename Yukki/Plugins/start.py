@@ -57,7 +57,7 @@ welcome_captcha_group = 2
 async def welcome(_, message: Message):
     chat_id = message.chat.id
     if not await is_served_chat(chat_id):
-        await message.reply_text(f"❌ **not in allowed chat**\n\nveez mega is only for allowed chats, ask any sudo user to allow your chat.\n\ncheck sudo user list [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)")
+        await message.reply_text(f"❌ **not in allowed chat**\n\nridwan music is only for allowed chats, ask any sudo user to allow your chat.\n\ncheck sudo user list [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)")
         return await app.leave_chat(chat_id)
     for member in message.new_chat_members:
         try:
@@ -91,7 +91,7 @@ async def play(_, message: Message):
         user_name = message.from_user.first_name
         rpk = "["+user_name+"](tg://user?id="+str(user_id)+")" 
         await app.send_message(message.chat.id,
-            text=f"✨ Welcome {rpk} !\n\n💎 [ʀɪᴅᴡᴀɴ ᴍᴜꜱɪᴄ ᴢᴇᴜꜱ](https://t.me/RdwanMsic_Bot) **memungkinkan** Anda untuk **memutar musik** di **Groups** melalui  **Telegram obrolan video ** fitur !\n\n🎙 **Temukan** semua **Bot's perintah** dan cara kerjanya dengan mengklik » 📓 **perintah** tombol!",
+            text=f"✨ Welcome {rpk} !\n\n💎 [ʀɪᴅᴡᴀɴ ᴍᴜꜱɪᴄ ᴢᴇᴜꜱ](https://t.me/RdwanMsic_Bot) **memungkinkan** Anda untuk **memutar musik** di **Groups** melalui  **Telegram obrolan video ** fitur !\n\n🎙 **Temukan** semua **Bot's perintah** dan cara kerjanya dengan mengklik » 📓 **commands** cari bacaan commands!",
             parse_mode="markdown",
             reply_markup=pstart_markup,
             reply_to_message_id=message.message_id,
