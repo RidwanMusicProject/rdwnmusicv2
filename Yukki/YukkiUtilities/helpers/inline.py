@@ -33,10 +33,10 @@ def others_markup(videoid, user_id):
                 InlineKeyboardButton(text="📥 ɢᴇᴛ ᴠɪᴅᴇᴏ", callback_data=f'gets video|{videoid}|{user_id}')
             ],  
             [
-                InlineKeyboardButton(text="🔙 Go Back", callback_data=f'goback {videoid}|{user_id}')
-                InlineKeyboardButton(text="🗑 𝐂𝐋𝐎𝐒𝐄", callback_data=f"ppcl2 smex|{user_id}")                                                                 
+                InlineKeyboardButton(text="🔙 Go Back", callback_data=f'goback {videoid}|{user_id}'),
+                InlineKeyboardButton(text="🗑 𝐂𝐋𝐎𝐒𝐄", callback_data=f'close2')                                                                 
             ],                                                                                                  
-          ]
+        ]
     return buttons
 
 
