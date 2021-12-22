@@ -11,7 +11,7 @@ def play_markup(videoid, user_id):
             [
                 InlineKeyboardButton(text="✨ 𝐆𝐫𝐨𝐮𝐩", url="https://t.me/unclesamaja1"),      
                 InlineKeyboardButton(text="𝐌𝐞𝐧𝐮 ⚙️", callback_data=f'other {videoid}|{user_id}'),
-            ], 
+            ],                              
         ]
     return buttons 
 
@@ -27,15 +27,16 @@ def others_markup(videoid, user_id):
             [
                 InlineKeyboardButton(text="✚ ʀᴅᴡᴀɴ ᴘʟᴀʏʟɪꜱᴛ", callback_data=f'playlist {videoid}|{user_id}'),
                 InlineKeyboardButton(text="✚ ɢʀᴏᴜʙ ᴘʟᴀʏʟɪꜱᴛ", callback_data=f'group_playlist {videoid}|{user_id}')
-            ],
+            ],  
             [
                 InlineKeyboardButton(text="📥 ɢᴇᴛ ᴀᴜᴅɪᴏ", callback_data=f'gets audio|{videoid}|{user_id}'),
                 InlineKeyboardButton(text="📥 ɢᴇᴛ ᴠɪᴅᴇᴏ", callback_data=f'gets video|{videoid}|{user_id}')
-            ],
+            ],  
             [
                 InlineKeyboardButton(text="🔙 Go Back", callback_data=f'goback {videoid}|{user_id}')
-            ],
-        ]
+                InlineKeyboardButton(text="🗑 𝐂𝐋𝐎𝐒𝐄", callback_data=f"ppcl2 smex|{user_id}")                                                                 
+            ],                                                                                                  
+          ]
     return buttons
 
 
@@ -225,7 +226,7 @@ def playlist_markup(user_name, user_id):
                 InlineKeyboardButton(text=f"{user_name[:8]}'s Playlist", callback_data=f'play_playlist {user_id}|personal')
             ],
             [
-                InlineKeyboardButton(text="🗑 Close", callback_data="close2")              
+                InlineKeyboardButton(text="🗑 𝐂𝐋𝐎𝐒𝐄", callback_data="close2")              
             ],
         ]
     return buttons
