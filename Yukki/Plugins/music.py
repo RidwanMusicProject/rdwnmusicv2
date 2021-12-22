@@ -304,7 +304,7 @@ async def play(_, message: Message):
         checking = f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})"
         await message.reply_photo(
             photo=thumb,
-            caption=(f"💡 **Track added to queue »** {position}\n\n🏷 <b>ɴᴀᴍᴇ:</b> [{title[:35]}...]({link}) \n⏱ <b>ᴅᴜʀᴀꜱɪ:</b> `{duration}` \n🎧 <b>Request by:</b> {checking}"),
+            caption=(f"💡 **Track added to queue »** {position}\n\n🏷 <b>ɴᴀᴍᴇ:</b> [{title[:35]}...]({link}) \n⏱ <b>ᴅᴜʀᴀꜱɪ:</b> `{duration}` \n🎧 <b>𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐛𝐲:</b> {checking}"),
             reply_markup=InlineKeyboardMarkup(buttons)
         )
         return await mystic.delete()     
@@ -335,7 +335,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo=thumb,
         reply_markup=InlineKeyboardMarkup(buttons),    
-        caption=(f"🏷 <b>Name:</b> [{title[:75]}]({link})\n⏱ <b>Duration:</b> `{duration}`\n💡 **Status:** `Playing`\n🎧 <b>Request by:</b> {checking}")
+        caption=(f"🏷 <b>ɴᴀᴍᴀ:</b> [{title[:75]}]({link})\n⏱ <b>ᴅᴜʀᴀꜱɪ:</b> `{duration}`\n💡 **Status:** `Playing`\n🎧 <b>𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐛𝐲:</b> {checking}")
     )   
         return await mystic.delete()
          
