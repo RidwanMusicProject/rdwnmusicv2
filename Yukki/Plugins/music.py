@@ -304,7 +304,7 @@ async def play(_, message: Message):
         checking = f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})"
         await message.reply_photo(
             photo=thumb,
-            caption=(f"💡 **Track added to queue »** {position}\n\n🏷 <b>Name:</b> [{title[:35]}...]({link}) \n⏱ <b>Duration:</b> `{duration}` \n🎧 <b>Request by:</b> {checking}"),
+            caption=(f"💡 **Track added to queue »** {position}\n\n🏷 <b>ɴᴀᴍᴇ:</b> [{title[:35]}...]({link}) \n⏱ <b>ᴅᴜʀᴀꜱɪ:</b> `{duration}` \n🎧 <b>Request by:</b> {checking}"),
             reply_markup=InlineKeyboardMarkup(buttons)
         )
         return await mystic.delete()     
@@ -471,7 +471,7 @@ async def startyuplay(_,CallbackQuery):
         m = await CallbackQuery.message.reply_photo(
         photo=thumb,
         reply_markup=InlineKeyboardMarkup(buttons),    
-        caption=(f"🏷 <b>Name:</b> [{title[:75]}]({url}) \n⏱ <b>Duration:</b> `{duration}`\n☕ **Manage** `HALBERT`\n🎧 **Request by:** {checking}")
+        caption=(f"🏷 <b>Name:</b> [{title[:75]}]({url}) \n⏱ <b>Duration:</b> `{duration}`\n☕ **ᴍᴀɴᴀɢᴇ** `HALBERT`\n🎧 **Request by:** {checking}")
     )   
         os.remove(thumb)
         await CallbackQuery.message.delete()
