@@ -33,7 +33,7 @@ def others_markup(videoid, user_id):
                 InlineKeyboardButton(text="📥 ɢᴇᴛ ᴠɪᴅᴇᴏ", callback_data=f'gets video|{videoid}|{user_id}')
             ],  
             [
-                InlineKeyboardButton(text="🔙 Go Back", callback_data=f'goback {videoid}|{user_id}'),
+                InlineKeyboardButton(text="🔙 ɢᴏ ʙᴀᴄᴋ", callback_data=f'goback {videoid}|{user_id}'),
                 InlineKeyboardButton(text="🗑 𝐂𝐋𝐎𝐒𝐄", callback_data=f'close2')                                                                 
             ],                                                                                                  
         ]
@@ -73,7 +73,7 @@ def audio_markup(videoid, user_id):
                 InlineKeyboardButton(text="⏹️", callback_data=f'stopvc2')
             ],
             [
-                InlineKeyboardButton(text="🗑 Close", callback_data="close2")              
+                InlineKeyboardButton(text="🗑 𝐂𝐋𝐎𝐒𝐄", callback_data="close2")              
             ],
         ]
     return buttons 
@@ -94,7 +94,7 @@ def search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, dura
                 InlineKeyboardButton(text="➡", callback_data=f'popat 1|{query}|{user_id}')
             ],
             [
-                InlineKeyboardButton(text="🗑 Close", callback_data=f"ppcl2 smex|{user_id}")
+                InlineKeyboardButton(text="🗑 𝐂𝐋𝐎𝐒𝐄", callback_data=f"ppcl2 smex|{user_id}")
             ],
         ]
     return buttons   
@@ -115,7 +115,7 @@ def search_markup2(ID6, ID7, ID8, ID9, ID10, duration6, duration7, duration8, du
                 InlineKeyboardButton(text="⬅", callback_data=f'popat 2|{query}|{user_id}')
             ],
             [
-                InlineKeyboardButton(text="🗑 Close", callback_data=f"ppcl2 smex|{user_id}")
+                InlineKeyboardButton(text="🗑 𝐂𝐋𝐎𝐒𝐄", callback_data=f"ppcl2 smex|{user_id}")
             ],
         ]
     return buttons 
@@ -124,7 +124,7 @@ def search_markup2(ID6, ID7, ID8, ID9, ID10, duration6, duration7, duration8, du
 def personal_markup(link):
     buttons= [
             [ 
-                InlineKeyboardButton(text="🗑 Close", callback_data=f'cls')
+                InlineKeyboardButton(text="🗑 𝐂𝐋𝐎𝐒𝐄", callback_data=f'cls')
             ],
         ]
     return buttons
@@ -139,7 +139,7 @@ start_keyboard = InlineKeyboardMarkup(
                 ],
                 [
                     InlineKeyboardButton(
-                        "🗑 Close", callback_data="close2"
+                        "🗑 𝐂𝐋𝐎𝐒𝐄", callback_data="close2"
                     )
                 ]    
             ]
@@ -178,7 +178,7 @@ close_keyboard = InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🗑 Close", callback_data="close2"
+                        "🗑 𝐂𝐋𝐎𝐒𝐄", callback_data="close2"
                     )
                 ]    
             ]
@@ -189,7 +189,7 @@ none_keyboard = InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🗑 Close", callback_data="cls"
+                        "🗑 𝐂𝐋𝐎𝐒𝐄", callback_data="cls"
                     )
                 ]    
             ]
@@ -210,7 +210,7 @@ play_list_keyboard = InlineKeyboardMarkup(
                 ],
                 [
                     InlineKeyboardButton(
-                        "🗑 Close", callback_data="close2"
+                        "🗑 𝐂𝐋𝐎𝐒𝐄", callback_data="close2"
                     )
                 ]
             ]
