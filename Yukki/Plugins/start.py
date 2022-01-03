@@ -108,8 +108,7 @@ async def play(_, message: Message):
             """,
             parse_mode="markdown",
             reply_markup=pstart_markup,
-            reply_to_message_id=message.message_id,
-            # disable_web_page_preview=True
+            reply_to_message_id=message.message_id
         )
     elif len(message.command) == 2:                                                           
         query = message.text.split(None, 1)[1]
