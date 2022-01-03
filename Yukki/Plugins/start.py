@@ -45,10 +45,11 @@ pstart_markup=InlineKeyboardMarkup(
                         "🌻 ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘꜱ", url="https://t.me/unclesamaja1"), 
                     InlineKeyboardButton(
                         "🔔 ᴄʜᴀɴɴᴇʟ", url="https://t.me/unclesamaja")
-                ],[
-                    InlineKeyboardButton(
-                        "Setup Guide", url="https://telegra.ph/RidwanMusic-12-15-2")
                 ]
+                # [
+                #     InlineKeyboardButton(
+                #         "Setup Guide", url="https://telegra.ph/RidwanMusic-12-15-2")
+                # ]
             ]
         )
 
