@@ -270,9 +270,8 @@ async def play(_, message: Message):
         url = "https://www.youtube.com/watch?v={id}"
         await mystic.delete()   
         buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
-        hmo = await message.reply_photo(
-            photo=thumb, 
-            caption=(f"1️⃣ <b>[{title1[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID1})\n └ ⚡ __Powered by Ridwan Music AI__\n\n2️⃣ <b>[{title2[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID2})\n └ ⚡ __Powered by Ridwan Music AI__\n\n3️⃣ <b>[{title3[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID3})\n └ ⚡ __Powered by Ridwan Music AI__\n\n4️⃣ <b>[{title4[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID4})\n └ ⚡ __Powered by Ridwan Music AI__\n\n5️⃣ <b>[{title5[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID5})\n └ ⚡ __Powered by Ridwan Music AI__"),    
+        hmo = await message.reply_text(
+            text=f"1️⃣ <b>[{title1[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID1})\n └ ⚡ __Powered by Ridwan Music AI__\n\n2️⃣ <b>[{title2[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID2})\n └ ⚡ __Powered by Ridwan Music AI__\n\n3️⃣ <b>[{title3[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID3})\n └ ⚡ __Powered by Ridwan Music AI__\n\n4️⃣ <b>[{title4[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID4})\n └ ⚡ __Powered by Ridwan Music AI__\n\n5️⃣ <b>[{title5[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID5})\n └ ⚡ __Powered by Ridwan Music AI__",    
             reply_markup=InlineKeyboardMarkup(buttons),
         )  
         
