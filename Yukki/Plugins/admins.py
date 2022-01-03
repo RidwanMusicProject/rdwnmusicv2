@@ -81,7 +81,7 @@ async def pause_cmd(_, message):
         return await message.reply_text("❌ **no music is currently playing**")   
     await music_off(chat_id)
     await yukki.pytgcalls.pause_stream(chat_id)
-    await message.reply_text("⏸ **Track paused.**\n\n• **To resume the playback, use the**\n» /resume command.")
+    await message.reply_text(f"⏸ **Track paused by {checking}.**\n\n• **To resume the playback, use the**\n» /resume command.")
 
 
 @app.on_message(filters.command("resume"))
@@ -101,7 +101,7 @@ async def stop_cmd(_, message):
     else:
         await music_on(chat_id)
         await yukki.pytgcalls.resume_stream(message.chat.id)
-        await message.reply_text("▶️ **Track resumed.**\n\n• **To pause the playback, use the**\n» /pause command.")
+        await message.reply_text(f"▶️ **Track resumed by {checking}.**\n\n• **To pause the playback, use the**\n» /pause command.")
 
 
 @app.on_message(filters.command(["stop", "end"]))
@@ -121,7 +121,7 @@ async def stop_cmd(_, message):
             pass                        
         await remove_active_chat(chat_id)
         await yukki.pytgcalls.leave_group_call(message.chat.id)
-        await message.reply_text("🎧 ᴍᴜꜱɪᴄ ᴛᴇʟᴀʜ ᴅɪ ᴇɴᴅ ᴅᴀʀɪ ᴏʙʀᴏʟᴀɴ ꜱᴜᴀʀᴀ.") 
+        await message.reply_text(f"🎧 ᴍᴜꜱɪᴄ ᴛᴇʟᴀʜ ᴅɪ ᴇɴᴅ ᴅᴀʀɪ ᴏʙʀᴏʟᴀɴ ꜱᴜᴀʀᴀ by {checking}.") 
     else:
         return await message.reply_text("❌ **no music is currently playing**")
 
@@ -225,7 +225,7 @@ async def stop_cmd(_, message):
                 await message.reply_photo(
                 photo= thumb,
                 reply_markup=InlineKeyboardMarkup(buttons),    
-                caption=(f"<b>⏭ **Skipped to the next music**</b>\n\n🏷 <b>**Name:**</b> {title[:70]}\n⏱ <b>**Duration:**</b> `{duration}` m\n💡 **Status:** `Playing`\n🎧 **Request by:** {semx.mention}")
+                caption=(f"<b>⏭ **Skipped to the next music by {checking}**</b>\n\n🏷 <b>**Name:**</b> {title[:70]}\n⏱ <b>**Duration:**</b> `{duration}` m\n💡 **Status:** `Playing`\n🎧 **Request by:** {semx.mention}")
             )   
                 os.remove(thumb)
             else:      
@@ -255,6 +255,6 @@ async def stop_cmd(_, message):
                 await message.reply_photo(
                 photo=f"downloads/{_chat_}final.png",
                 reply_markup=InlineKeyboardMarkup(buttons),
-                caption=f"<b>⏭ **Skipped to the next music**</b>\n\n🏷 <b>**Name:**</b> {title[:70]}\n⏱ <b>**Duration:**</b> {duration} m\n🎧 **Request by:** </b> {username}",
+                caption=f"<b>⏭ **Skipped to the next music by {checking}**</b>\n\n🏷 <b>**Name:**</b> {title[:70]}\n⏱ <b>**Duration:**</b> {duration} m\n🎧 **Request by:** </b> {username}",
                 )
                 return
