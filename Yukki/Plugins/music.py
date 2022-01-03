@@ -470,7 +470,7 @@ async def startyuplay(_,CallbackQuery):
         m = await CallbackQuery.message.reply_photo(
         photo=thumb,
         reply_markup=InlineKeyboardMarkup(buttons),    
-        caption=(f"🏷 <b>𝐍𝐚𝐦𝐚:</b> [{title[:75]}]({url}) \n⏱ <b>𝐃𝐮𝐫𝐚𝐬𝐢:</b> `{duration}`\n💡 **𝐌𝐚𝐧𝐚𝐠𝐞:** `HALBERT`\n🎧 **Request by:** {checking}")
+        caption=(f"🏷 <b>𝐍𝐚𝐦𝐚:</b> [{title[:75]}]({url}) \n⏱ <b>𝐃𝐮𝐫𝐚𝐬𝐢:</b> `{duration}`\n💡 **𝐌𝐚𝐧𝐚𝐠𝐞:** `HALBERT`\n🎧 **𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐛𝐲:** {checking}")
     )   
         os.remove(thumb)
         await CallbackQuery.message.delete()
