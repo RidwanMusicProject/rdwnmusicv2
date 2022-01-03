@@ -118,7 +118,7 @@ async def pausevc(_,CallbackQuery):
             user_id = CallbackQuery.from_user.id
             user_name = CallbackQuery.from_user.first_name
             rpk = "["+user_name+"](tg://user?id="+str(user_id)+")"
-            await CallbackQuery.message.reply(f"⏸ music playback has paused", reply_markup=play_keyboard)
+            await CallbackQuery.message.reply(f"⏸ music playback has paused by **{rpk}**", reply_markup=play_keyboard)
             await CallbackQuery.message.delete()
         else:
             await CallbackQuery.answer(f"❌ no music is currently playing", show_alert=True)
@@ -145,7 +145,7 @@ async def resumevc(_,CallbackQuery):
             user_id = CallbackQuery.from_user.id
             user_name = CallbackQuery.from_user.first_name
             rpk = "["+user_name+"](tg://user?id="+str(user_id)+")"
-            await CallbackQuery.message.reply(f"▶ music playback has resumed", reply_markup=play_keyboard)
+            await CallbackQuery.message.reply(f"▶ music playback has resumed by **{rpk}**", reply_markup=play_keyboard)
             await CallbackQuery.message.delete()
     else:
         await CallbackQuery.answer(f"❌ no music is currently playing", show_alert=True)
@@ -253,7 +253,7 @@ async def skipvc(_,CallbackQuery):
                 await CallbackQuery.message.reply_photo(
                 photo= thumb,
                 reply_markup=InlineKeyboardMarkup(buttons),    
-                caption=(f"⏭ <b>Skipped to the next music</b>\n\n🏷 <b>Name:</b> {title[:60]}\n⏱ <b>Duration:</b> `{duration} m`\n💡 **Status:** `Playing`\n🎧 **Request by:** {semx.mention}")
+                caption=(f"⏭ <b>Skipped to the next music by **{rpk}**</b>\n\n🏷 <b>Name:</b> {title[:60]}\n⏱ <b>Duration:</b> `{duration} m`\n💡 **Status:** `Playing`\n🎧 **Request by:** {semx.mention}")
             )   
                 os.remove(thumb)
             else:      
@@ -286,7 +286,7 @@ async def skipvc(_,CallbackQuery):
                 await CallbackQuery.message.reply_photo(
                 photo=f"downloads/{_chat_}final.png",
                 reply_markup=InlineKeyboardMarkup(buttons),
-                caption=f"⏭ <b>Skipped to the next music</b>\n\n🏷 <b>Name:</b> {title[:60]}\n⏱ <b>Duration:</b> `{duration} m`\n💡 **Status:** `Playing`\n🎧 **Request by:** {username}",
+                caption=f"⏭ <b>Skipped to the next music by **{rpk}**</b>\n\n🏷 <b>Name:</b> {title[:60]}\n⏱ <b>Duration:</b> `{duration} m`\n💡 **Status:** `Playing`\n🎧 **Request by:** {username}",
                 )
                 return           
             
@@ -311,7 +311,7 @@ async def stopvc(_,CallbackQuery):
         user_id = CallbackQuery.from_user.id
         user_name = CallbackQuery.from_user.first_name
         rpk = "["+user_name+"](tg://user?id="+str(user_id)+")"
-        await CallbackQuery.edit_message_text("✅ this music playback has ended", reply_markup=close_keyboard)
+        await CallbackQuery.edit_message_text("✅ this music playback has ended by **{rpk}**", reply_markup=close_keyboard)
     else:
         await CallbackQuery.answer(f"❌ no music is currently playing", show_alert=True)
 
