@@ -104,7 +104,7 @@ async def play(_, message: Message):
 
 👑 𝐎𝐰𝐧𝐞𝐫 : **[𝐇𝐚𝐥𝐛𝐞𝐫𝐭](https://t.me/rdwan_13)**
 
-💡 CARA PENGGUNAAN BOT KLIK **COMMANDS**
+💡 CARA PENGGUNAAN BOT KLIK » **COMMANDS**
             """,
             parse_mode="markdown",
             reply_markup=pstart_markup,
