@@ -271,7 +271,7 @@ async def play(_, message: Message):
         await mystic.delete()   
         buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
         hmo = await message.reply_text(
-            text=f"1️⃣ <b>[{title1[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})\n ├ ☕️ <b>Creator : [𝐇ALBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__\n\n2️⃣ <b>[{title2[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})\n ├ ☕️ <b>Creator : [𝐇ALBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__\n\n3️⃣ <b>[{title3[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})\n ├ ☕️ <b>Creator : [𝐇ALBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__\n\n4️⃣ <b>[{title4[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})\n ├ ☕️ <b>Creator : [𝐇ALBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__\n\n5️⃣ <b>[{title5[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})\n ├ ☕️ <b>Creator : [𝐇ALBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__",    
+            text=f"1️⃣ <b>[{title1[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})\n ├ ☕️ <b>Creator : [HELBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__\n\n2️⃣ <b>[{title2[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})\n ├ ☕️ <b>Creator : [HELBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__\n\n3️⃣ <b>[{title3[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})\n ├ ☕️ <b>Creator : [HELBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__\n\n4️⃣ <b>[{title4[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})\n ├ ☕️ <b>Creator : [HELBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__\n\n5️⃣ <b>[{title5[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})\n ├ ☕️ <b>Creator : [HELBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__",    
             reply_markup=InlineKeyboardMarkup(buttons),
         )  
         
@@ -303,7 +303,7 @@ async def play(_, message: Message):
         checking = f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})"
         await message.reply_photo(
             photo=thumb,
-            caption=(f"💡 **Track added to queue »** {position}\n\n🏷 <b>ɴᴀᴍᴇ:</b> [{title[:35]}...]({link}) \n⏱ <b>ᴅᴜʀᴀꜱɪ:</b> `{duration}` \n🎧 <b>𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐛𝐲:</b> {checking}"),
+            caption=(f"💡 **Track added to queue »** {position}\n\n🏷 <b>𝐍𝐚𝐦𝐚:</b> [{title[:35]}...]({link}) \n⏱ <b>𝐃𝐮𝐫𝐚𝐬𝐢:</b> `{duration}` \n🎧 <b>𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐛𝐲:</b> {checking}"),
             reply_markup=InlineKeyboardMarkup(buttons)
         )
         return await mystic.delete()     
@@ -334,7 +334,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo=thumb,
         reply_markup=InlineKeyboardMarkup(buttons),    
-        caption=(f"🏷 <b>ɴᴀᴍᴀ:</b> [{title[:75]}]({link})\n⏱ <b>ᴅᴜʀᴀꜱɪ:</b> `{duration}`\n💡 **Status:** `Playing`\n🎧 <b>𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐛𝐲:</b> {checking}")
+        caption=(f"🏷 <b>𝐍𝐚𝐦𝐚:</b> [{title[:75]}]({link})\n⏱ <b>𝐃𝐮𝐫𝐚𝐬𝐢:</b> `{duration}`\n💡 **Status:** `Playing`\n🎧 <b>𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐛𝐲:</b> {checking}")
     )   
         return await mystic.delete()
          
@@ -448,7 +448,7 @@ async def startyuplay(_,CallbackQuery):
         await mystic.delete()
         m = await CallbackQuery.message.reply_photo(
         photo=thumb,
-        caption=(f"💡 **Track added to queue »** `{position}`\n\n🏷 <b>Name:</b> [{title[:35]}...]({url})\n⏱ <b>Duration:</b> `{duration}`\n🎧 <b>Request by:</b> {checking}"),
+        caption=(f"💡 **Track added to queue »** `{position}`\n\n🏷 <b>𝐍𝐚𝐦𝐚:</b> [{title[:35]}...]({url})\n⏱ <b>𝐃𝐮𝐫𝐚𝐬𝐢:</b> `{duration}`\n🎧 <b>𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐛𝐲:</b> {checking}"),
         reply_markup=InlineKeyboardMarkup(buttons)
     )
         os.remove(thumb)
@@ -470,7 +470,7 @@ async def startyuplay(_,CallbackQuery):
         m = await CallbackQuery.message.reply_photo(
         photo=thumb,
         reply_markup=InlineKeyboardMarkup(buttons),    
-        caption=(f"🏷 <b>Name:</b> [{title[:75]}]({url}) \n⏱ <b>Duration:</b> `{duration}`\n💡 **ᴍᴀɴᴀɢᴇ** `HALBERT`\n🎧 **Request by:** {checking}")
+        caption=(f"🏷 <b>𝐍𝐚𝐦𝐚:</b> [{title[:75]}]({url}) \n⏱ <b>𝐃𝐮𝐫𝐚𝐬𝐢:</b> `{duration}`\n💡 **𝐌𝐚𝐧𝐚𝐠𝐞:** `HALBERT`\n🎧 **Request by:** {checking}")
     )   
         os.remove(thumb)
         await CallbackQuery.message.delete()
@@ -529,7 +529,7 @@ async def popat(_, CallbackQuery):
         url = "https://www.youtube.com/watch?v={id}"
         buttons = search_markup2(ID6, ID7, ID8, ID9, ID10, duration6, duration7, duration8, duration9, duration10 ,user_id, query)
         await CallbackQuery.edit_message_text(
-            f"6️⃣ <b>[{title6[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID6})\n ├ ☕️ <b>Creator : [𝐇ALBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__\n\n7️⃣ <b>[{title7[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID7})\n ├ ☕️ <b>Creator : [𝐇ALBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__\n\n8️⃣ <b>[{title8[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID8})\n ├ ☕️ <b>Creator : [𝐇ALBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__\n\n9️⃣ <b>[{title9[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID9})\n ├ ☕️ <b>Creator : [𝐇ALBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__\n\n🔟 <b>[{title10[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID10})\n ├ ☕️ <b>Creator : [𝐇ALBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__",    
+            f"6️⃣ <b>[{title6[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID6})\n ├ ☕️ <b>Creator : [HELBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__\n\n7️⃣ <b>[{title7[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID7})\n ├ ☕️ <b>Creator : [HELBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__\n\n8️⃣ <b>[{title8[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID8})\n ├ ☕️ <b>Creator : [HELBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__\n\n9️⃣ <b>[{title9[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID9})\n ├ ☕️ <b>Creator : [HELBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__\n\n🔟 <b>[{title10[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID10})\n ├ ☕️ <b>Creator : [HELBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__",    
             reply_markup=InlineKeyboardMarkup(buttons),
         )  
 
@@ -538,7 +538,7 @@ async def popat(_, CallbackQuery):
         url = "https://www.youtube.com/watch?v={id}"
         buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
         await CallbackQuery.edit_message_text(
-            f"1️⃣ <b>[{title1[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})\n ├ ☕️ <b>Creator : [𝐇ALBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__\n\n2️⃣ <b>[{title2[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})\n ├ ☕️ <b>Creator : [𝐇ALBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__\n\n3️⃣ <b>[{title3[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})\n ├ ☕️ <b>Creator : [𝐇ALBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__\n\n4️⃣ <b>[{title4[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})\n ├ ☕️ <b>Creator : [𝐇ALBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__\n\n5️⃣ <b>[{title5[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})\n ├ ☕️ <b>Creator : [𝐇ALBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__",    
+            f"1️⃣ <b>[{title1[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})\n ├ ☕️ <b>Creator : [HELBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__\n\n2️⃣ <b>[{title2[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})\n ├ ☕️ <b>Creator : [HELBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__\n\n3️⃣ <b>[{title3[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})\n ├ ☕️ <b>Creator : [HELBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__\n\n4️⃣ <b>[{title4[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})\n ├ ☕️ <b>Creator : [HELBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__\n\n5️⃣ <b>[{title5[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})\n ├ ☕️ <b>Creator : [HELBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__",    
             reply_markup=InlineKeyboardMarkup(buttons),
         )  
         
