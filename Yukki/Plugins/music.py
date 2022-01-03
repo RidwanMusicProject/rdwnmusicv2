@@ -533,7 +533,7 @@ async def popat(_, CallbackQuery):
             f"6️⃣ <b>[{title6[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID6})\n └ ⚡ __Powered by Ridwan Music AI__\n\n7️⃣ <b>[{title7[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID7})\n └ ⚡ __Powered by Ridwan Music AI__\n\n8️⃣ <b>[{title8[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID8})\n └ ⚡ __Powered by Ridwan Music AI__\n\n9️⃣ <b>[{title9[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID9})\n └ ⚡ __Powered by Ridwan Music AI__\n\n🔟 <b>[{title10[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID10})\n └ ⚡ __Powered by Ridwan Music AI__",    
             reply_markup=InlineKeyboardMarkup(buttons),
         )  
-        disable_web_page_preview=True
+
         return    
     if i == 2:
         url = "https://www.youtube.com/watch?v={id}"
@@ -542,7 +542,7 @@ async def popat(_, CallbackQuery):
             f"1️⃣ <b>[{title1[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID1})\n └ ⚡ __Powered by Ridwan Music AI__\n\n2️⃣ <b>[{title2[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID2})\n └ ⚡ __Powered by Ridwan Music AI__\n\n3️⃣ <b>[{title3[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID3})\n └ ⚡ __Powered by Ridwan Music AI__\n\n4️⃣ <b>[{title4[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID4})\n └ ⚡ __Powered by Ridwan Music AI__\n\n5️⃣ <b>[{title5[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID5})\n └ ⚡ __Powered by Ridwan Music AI__",    
             reply_markup=InlineKeyboardMarkup(buttons),
         )  
-        disable_web_page_preview=True
+        
         return
 
 
