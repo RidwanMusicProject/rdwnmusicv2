@@ -91,7 +91,7 @@ async def play(_, message: Message):
         user_name = message.from_user.first_name
         rpk = "["+user_name+"](tg://user?id="+str(user_id)+")" 
         await app.send_message(message.chat.id,
-            text=f"""✨ Welcome {rpk[:30]} !\n\n 
+            text=f"""✨ Welcome {rpk} !\n\n 
 💭 𝐈𝐧𝐢 𝐝𝐢 𝐤𝐞𝐥𝐨𝐥𝐚 𝐨𝐥𝐞𝐡 **[HALBERT](https://t.me/rdwan_13)**, 𝐝𝐚𝐧 𝐛𝐢𝐬𝐚 𝐦𝐞𝐦𝐛𝐚𝐧𝐭𝐮 𝐤𝐚𝐥𝐢𝐚𝐧 𝐮𝐧𝐭𝐮𝐤 𝐦𝐞𝐧𝐝𝐞𝐧𝐠𝐚𝐫 𝐤𝐚𝐧 𝐦𝐮𝐬𝐢𝐜 𝐦𝐞𝐥𝐚𝐥𝐮𝐢 𝐨𝐛𝐫𝐨𝐥𝐚𝐧 𝐬𝐮𝐚𝐫𝐚 𝐆𝐑𝐎𝐔𝐏 𝐭𝐞𝐥𝐞𝐠𝐫𝐚𝐦 (𝐕𝐂𝐆)
             
 𝗗𝗮𝗻 𝗦𝗮𝘆𝗮 𝗠𝗲𝗺𝗶𝗹𝗶𝗸𝗶 𝗙𝗶𝘁𝘂𝗿 𝗦𝗲𝗽𝗲𝗿𝘁𝗶 :
