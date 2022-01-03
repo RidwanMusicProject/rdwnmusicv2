@@ -275,7 +275,7 @@ async def play(_, message: Message):
             caption=(f"1️⃣ <b>[{title1[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID1})\n └ ⚡ __Powered by Ridwan Music AI__\n\n2️⃣ <b>[{title2[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID2})\n └ ⚡ __Powered by Ridwan Music AI__\n\n3️⃣ <b>[{title3[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID3})\n └ ⚡ __Powered by Ridwan Music AI__\n\n4️⃣ <b>[{title4[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID4})\n └ ⚡ __Powered by Ridwan Music AI__\n\n5️⃣ <b>[{title5[:25]}...]({url})</b>\n ├ ☕ [HALBERT](https://t.me/rdwan_13?start=info_{ID5})\n └ ⚡ __Powered by Ridwan Music AI__"),    
             reply_markup=InlineKeyboardMarkup(buttons),
         )  
-        disable_web_page_preview=True
+        
         return   
     if await is_active_chat(chat_id):
         position = await put(chat_id, file=file)
