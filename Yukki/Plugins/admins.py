@@ -121,7 +121,7 @@ async def stop_cmd(_, message):
             pass                        
         await remove_active_chat(chat_id)
         await yukki.pytgcalls.leave_group_call(message.chat.id)
-        await message.reply_text(f"🎧 ᴍᴜꜱɪᴄ ᴛᴇʟᴀʜ ᴅɪ ᴇɴᴅ ᴅᴀʀɪ ᴏʙʀᴏʟᴀɴ ꜱᴜᴀʀᴀ by {checking}.") 
+        await message.reply_text(f"🎧 𝙈𝙪𝙨𝙞𝙠 𝙏𝙚𝙡𝙖𝙝 𝘿𝙞 𝙈𝙖𝙩𝙞𝙠𝙖𝙣 𝙊𝙡𝙚𝙝 {checking}.") 
     else:
         return await message.reply_text("❌ **no music is currently playing**")
 
