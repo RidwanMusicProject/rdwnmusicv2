@@ -34,7 +34,7 @@ pstart_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🌷 ᴀᴅᴅ ᴋᴇ ɢʀᴏᴜᴘ ʟᴜ ɢɪʟᴀ 🌷", url="https://t.me/RdwanMsic_Bot?startgroup=true")
+                        "🌷 ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ 🌷", url="https://t.me/RdwanMsic_Bot?startgroup=true")
                 ],[
                     InlineKeyboardButton(
                         "🚑 ᴄᴏᴍᴍᴀɴᴅꜱ", url="https://telegra.ph/RidwanMusic-12-15-2"),
@@ -63,9 +63,9 @@ async def welcome(_, message: Message):
     for member in message.new_chat_members:
         try:
             if member.id in OWNER:
-                return await message.reply_text(f"💻 Saya Di Kelola Oleh Bos Saya Halbert, My Owner Bot [{member.mention}] has joined this group.")
+                return await message.reply_text(f"💻 sᴀʏᴀ ᴅɪ ᴋᴇʟᴏʟᴀ ᴏʟᴇʜ ʙᴏs sᴀʏᴀ ʜᴀʟʙᴇʀᴛ, ᴍʏ ᴏᴡɴᴇʀ ʙᴏᴛ [{member.mention}] has joined this group.")
             if member.id in SUDOERS:
-                return await message.reply_text(f"💡 Selamat Datang Bos Halbert, The Sudo member [{member.mention}] has joined this group.")
+                return await message.reply_text(f"💡 sᴇʟᴀᴍᴀᴛ ᴅᴀᴛᴀɴɢ ᴀsɪssᴛᴀɴᴛ ᴢᴇᴜs, ᴛʜᴇ sᴜᴅᴏ ᴍᴇᴍʙᴇʀ [{member.mention}] has joined this group.")
             if member.id == ASSID:
                 await remove_active_chat(chat_id)
             if member.id == BOT_ID:
@@ -104,7 +104,7 @@ async def play(_, message: Message):
 
 👑 𝐎𝐰𝐧𝐞𝐫 : **[𝐇𝐚𝐥𝐛𝐞𝐫𝐭](https://t.me/rdwan_13)**
 
-💡 CARA PENGGUNAAN BOT KLIK » **COMMANDS**
+🚑 CARA PENGGUNAAN BOT KLIK » **COMMANDS**
             """,
             parse_mode="markdown",
             reply_markup=pstart_markup,
