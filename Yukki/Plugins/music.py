@@ -58,6 +58,15 @@ async def play(_, message: Message):
     user_id = message.from_user.id
     user_name = message.from_user.first_name
     rpk = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
+    if not await is_served_chat(chat_id):
+        await message.reply_text(
+            f"❌ **not in allowed chat**\n\nhalbert music is only for allowed chats. ask any sudo user to allow your chat.\n\ncheck sudo user list [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)"
+        )
+        return await app.leave_chat(chat_id)
+    if message.sender_chat:
+        return await message.reply_text(
+            "you're an __Anonymous__ Admin !\n\n» revert back to user account from admin rights."
+        )
     if GROUP_FORCE_SUBCRIBE:
         try:
             user = await app.get_chat_member(GROUP_FORCE_SUBCRIBE, user_id)
@@ -105,15 +114,6 @@ async def play(_, message: Message):
                 disable_web_page_preview=True,
             )
             return
-    if not await is_served_chat(chat_id):
-        await message.reply_text(
-            f"❌ **not in allowed chat**\n\nhalbert music is only for allowed chats. ask any sudo user to allow your chat.\n\ncheck sudo user list [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)"
-        )
-        return await app.leave_chat(chat_id)
-    if message.sender_chat:
-        return await message.reply_text(
-            "you're an __Anonymous__ Admin !\n\n» revert back to user account from admin rights."
-        )
     user_id = message.from_user.id
     chat_title = message.chat.title
     message.from_user.first_name
