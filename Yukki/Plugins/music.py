@@ -2,7 +2,7 @@ import asyncio
 import os
 import random
 import shutil
-from os import path, getenv
+from os import getenv, path
 
 import yt_dlp
 from pyrogram import Client, filters
@@ -60,10 +60,11 @@ async def play(_, message: Message):
     rpk = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
     if GROUP_FORCE_SUBCRIBE:
         try:
-            user = await client.get_chat_member(GROUP_FORCE_SUBCRIBE, user_id)
+            user = await app.get_chat_member(GROUP_FORCE_SUBCRIBE, user_id)
             if user.status == "kicked":
-                await message.reply(
-                    f"**❌ {rpk} anda telah di blokir dari grup dukungan\n\n🔻 Klik tombol dibawah untuk menghubungi admin grup**",
+                await app.send_message(
+                    chat_id,
+                    text=f"**❌ {rpk} anda telah di blokir dari grup dukungan\n\n🔻 Klik tombol dibawah untuk menghubungi admin grup**",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
@@ -79,8 +80,9 @@ async def play(_, message: Message):
                 )
             return
         except UserNotParticipant:
-            await message.reply(
-                f"""
+            await app.send_message(
+                chat_id,
+                text=f"""
 **🙋🏻‍♂️ Halo {rpk}. Apa Kabar?
 
 ☑️ Untuk Menggunakan Bot Anda Harus Join Di Grup Support Bot Terlebih Dahulu 
@@ -369,7 +371,7 @@ async def play(_, message: Message):
             query,
         )
         hmo = await message.reply_text(
-            text=f"1️⃣ <b>[{title1[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})\n ├ ☕️ <b>Creator : [𝙃𝘼𝙇𝘽𝙀𝙍𝙏](https://t.me/rdwan_13)</b>\n └ ⚡ __𝙋𝙤𝙬𝙚𝙧𝙚𝙙 𝙗𝙮 : [𝙍𝙞𝙙𝙬𝙖𝙣 𝙕𝙚𝙪𝙨 𝙋𝙧𝙤𝙟𝙚𝙘𝙩](https://t.me/unclesamaja)__\n\n2️⃣ <b>[{title2[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})\n ├ ☕️ <b>Creator : [𝙃𝘼𝙇𝘽𝙀𝙍𝙏](https://t.me/rdwan_13)</b>\n └ ⚡ __𝙋𝙤𝙬𝙚𝙧𝙚𝙙 𝙗𝙮 : [𝙍𝙞𝙙𝙬𝙖𝙣 𝙕𝙚𝙪𝙨 𝙋𝙧𝙤𝙟𝙚𝙘𝙩](https://t.me/unclesamaja)__\n\n3️⃣ <b>[{title3[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})\n ├ ☕️ <b>Creator : [𝙃𝘼𝙇𝘽𝙀𝙍𝙏](https://t.me/rdwan_13)</b>\n └ ⚡ __𝙋𝙤𝙬𝙚𝙧𝙚𝙙 𝙗𝙮 : [𝙍𝙞𝙙𝙬𝙖𝙣 𝙕𝙚𝙪𝙨 𝙋𝙧𝙤𝙟𝙚𝙘𝙩](https://t.me/unclesamaja)__\n\n4️⃣ <b>[{title4[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})\n ├ ☕️ <b>Creator : [𝙃𝘼𝙇𝘽𝙀𝙍𝙏](https://t.me/rdwan_13)</b>\n └ ⚡ __𝙋𝙤𝙬𝙚𝙧𝙚𝙙 𝙗𝙮 : [𝙍𝙞𝙙𝙬𝙖𝙣 𝙕𝙚𝙪𝙨 𝙋𝙧𝙤𝙟𝙚𝙘𝙩](https://t.me/unclesamaja)__\n\n5️⃣ <b>[{title5[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})\n ├ ☕️ <b>Creator : [𝙃𝘼𝙇𝘽𝙀𝙍𝙏](https://t.me/rdwan_13)</b>\n └ ⚡ __𝙋𝙤𝙬𝙚𝙧𝙚𝙙 𝙗𝙮 : [𝙍𝙞𝙙𝙬𝙖𝙣 𝙕𝙚𝙪𝙨 𝙋𝙧𝙤𝙟𝙚𝙘𝙩](https://t.me/unclesamaja)__",
+            text=f"1️⃣ <b>[{title1[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})\n ├ ☕️ <b>Creator : [HELBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__\n\n2️⃣ <b>[{title2[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})\n ├ ☕️ <b>Creator : [HELBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__\n\n3️⃣ <b>[{title3[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})\n ├ ☕️ <b>Creator : [HELBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__\n\n4️⃣ <b>[{title4[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})\n ├ ☕️ <b>Creator : [HELBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__\n\n5️⃣ <b>[{title5[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})\n ├ ☕️ <b>Creator : [HELBERT](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [Ridwan Project](https://t.me/unclesamaja)__",
             reply_markup=InlineKeyboardMarkup(buttons),
         )
 
@@ -679,7 +681,7 @@ async def popat(_, CallbackQuery):
             query,
         )
         await CallbackQuery.edit_message_text(
-            f"6️⃣ <b>[{title6[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID6})\n ├ ☕️ <b>Creator : [𝙃𝘼𝙇𝘽𝙀𝙍𝙏](https://t.me/rdwan_13)</b>\n └ ⚡ __𝙋𝙤𝙬𝙚𝙧𝙚𝙙 𝙗𝙮 : [𝙍𝙞𝙙𝙬𝙖𝙣 𝙕𝙚𝙪𝙨 𝙋𝙧𝙤𝙟𝙚𝙘𝙩](https://t.me/unclesamaja)__\n\n7️⃣ <b>[{title7[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID7})\n ├ ☕️ <b>Creator : [𝙃𝘼𝙇𝘽𝙀𝙍𝙏](https://t.me/rdwan_13)</b>\n └ ⚡ __𝙋𝙤𝙬𝙚𝙧𝙚𝙙 𝙗𝙮 : [𝙍𝙞𝙙𝙬𝙖𝙣 𝙕𝙚𝙪𝙨 𝙋𝙧𝙤𝙟𝙚𝙘𝙩](https://t.me/unclesamaja)__\n\n8️⃣ <b>[{title8[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID8})\n ├ ☕️ <b>Creator : [𝙃𝘼𝙇𝘽𝙀𝙍𝙏](https://t.me/rdwan_13)</b>\n └ ⚡ __𝙋𝙤𝙬𝙚𝙧𝙚𝙙 𝙗𝙮 : [𝙍𝙞𝙙𝙬𝙖𝙣 𝙕𝙚𝙪𝙨 𝙋𝙧𝙤𝙟𝙚𝙘𝙩](https://t.me/unclesamaja)__\n\n9️⃣ <b>[{title9[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID9})\n ├ ☕️ <b>Creator : [𝙃𝘼𝙇𝘽𝙀𝙍𝙏](https://t.me/rdwan_13)</b>\n └ ⚡ __𝙋𝙤𝙬𝙚𝙧𝙚𝙙 𝙗𝙮 : [𝙍𝙞𝙙𝙬𝙖𝙣 𝙕𝙚𝙪𝙨 𝙋𝙧𝙤𝙟𝙚𝙘𝙩](https://t.me/unclesamaja)__\n\n🔟 <b>[{title10[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID10})\n ├ ☕️ <b>Creator : [𝙃𝘼𝙇𝘽𝙀𝙍𝙏](https://t.me/rdwan_13)</b>\n └ ⚡ __𝙋𝙤𝙬𝙚𝙧𝙚𝙙 𝙗𝙮 : [𝙍𝙞𝙙𝙬𝙖𝙣 𝙕𝙚𝙪𝙨 𝙋𝙧𝙤𝙟𝙚𝙘𝙩](https://t.me/unclesamaja)__",
+            f"6️⃣ <b>[{title6[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID6})\n ├ ☕️ <b>Creator : [𝙃𝘼𝙇𝘽𝙀𝙍𝙏](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [𝙍𝙞𝙙𝙬𝙖𝙣 𝙕𝙚𝙪𝙨 𝙋𝙧𝙤𝙟𝙚𝙘𝙩](https://t.me/unclesamaja)__\n\n7️⃣ <b>[{title7[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID7})\n ├ ☕️ <b>Creator : [𝙃𝘼𝙇𝘽𝙀𝙍𝙏](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [𝙍𝙞𝙙𝙬𝙖𝙣 𝙕𝙚𝙪𝙨 𝙋𝙧𝙤𝙟𝙚𝙘𝙩](https://t.me/unclesamaja)__\n\n8️⃣ <b>[{title8[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID8})\n ├ ☕️ <b>Creator : [𝙃𝘼𝙇𝘽𝙀𝙍𝙏](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [𝙍𝙞𝙙𝙬𝙖𝙣 𝙕𝙚𝙪𝙨 𝙋𝙧𝙤𝙟𝙚𝙘𝙩](https://t.me/unclesamaja)__\n\n9️⃣ <b>[{title9[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID9})\n ├ ☕️ <b>Creator : [𝙃𝘼𝙇𝘽𝙀𝙍𝙏](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [𝙍𝙞𝙙𝙬𝙖𝙣 𝙕𝙚𝙪𝙨 𝙋𝙧𝙤𝙟𝙚𝙘𝙩](https://t.me/unclesamaja)__\n\n🔟 <b>[{title10[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID10})\n ├ ☕️ <b>Creator : [𝙃𝘼𝙇𝘽𝙀𝙍𝙏](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [𝙍𝙞𝙙𝙬𝙖𝙣 𝙕𝙚𝙪𝙨 𝙋𝙧𝙤𝙟𝙚𝙘𝙩](https://t.me/unclesamaja)__",
             reply_markup=InlineKeyboardMarkup(buttons),
         )
 
@@ -701,7 +703,7 @@ async def popat(_, CallbackQuery):
             query,
         )
         await CallbackQuery.edit_message_text(
-            f"1️⃣ <b>[{title1[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})\n ├ ☕️ <b>Creator : [𝙃𝘼𝙇𝘽𝙀𝙍𝙏](https://t.me/rdwan_13)</b>\n └ ⚡ __𝙋𝙤𝙬𝙚𝙧𝙚𝙙 𝙗𝙮 : [𝙍𝙞𝙙𝙬𝙖𝙣 𝙕𝙚𝙪𝙨 𝙋𝙧𝙤𝙟𝙚𝙘𝙩](https://t.me/unclesamaja)__\n\n2️⃣ <b>[{title2[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})\n ├ ☕️ <b>Creator : [𝙃𝘼𝙇𝘽𝙀𝙍𝙏](https://t.me/rdwan_13)</b>\n └ ⚡ __𝙋𝙤𝙬𝙚𝙧𝙚𝙙 𝙗𝙮 : [𝙍𝙞𝙙𝙬𝙖𝙣 𝙕𝙚𝙪𝙨 𝙋𝙧𝙤𝙟𝙚𝙘𝙩](https://t.me/unclesamaja)__\n\n3️⃣ <b>[{title3[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})\n ├ ☕️ <b>Creator : [𝙃𝘼𝙇𝘽𝙀𝙍𝙏](https://t.me/rdwan_13)</b>\n └ ⚡ __𝙋𝙤𝙬𝙚𝙧𝙚𝙙 𝙗𝙮 : [𝙍𝙞𝙙𝙬𝙖𝙣 𝙕𝙚𝙪𝙨 𝙋𝙧𝙤𝙟𝙚𝙘𝙩](https://t.me/unclesamaja)__\n\n4️⃣ <b>[{title4[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})\n ├ ☕️ <b>Creator : [𝙃𝘼𝙇𝘽𝙀𝙍𝙏](https://t.me/rdwan_13)</b>\n └ ⚡ __𝙋𝙤𝙬𝙚𝙧𝙚𝙙 𝙗𝙮 : [𝙍𝙞𝙙𝙬𝙖𝙣 𝙕𝙚𝙪𝙨 𝙋𝙧𝙤𝙟𝙚𝙘𝙩](https://t.me/unclesamaja)__\n\n5️⃣ <b>[{title5[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})\n ├ ☕️ <b>Creator : [𝙃𝘼𝙇𝘽𝙀𝙍𝙏](https://t.me/rdwan_13)</b>\n └ ⚡ __𝙋𝙤𝙬𝙚𝙧𝙚𝙙 𝙗𝙮 : [𝙍𝙞𝙙𝙬𝙖𝙣 𝙕𝙚𝙪𝙨 𝙋𝙧𝙤𝙟𝙚𝙘𝙩](https://t.me/unclesamaja)__",
+            f"1️⃣ <b>[{title1[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})\n ├ ☕️ <b>Creator : [𝙃𝘼𝙇𝘽𝙀𝙍𝙏](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [𝙍𝙞𝙙𝙬𝙖𝙣 𝙕𝙚𝙪𝙨 𝙋𝙧𝙤𝙟𝙚𝙘𝙩](https://t.me/unclesamaja)__\n\n2️⃣ <b>[{title2[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})\n ├ ☕️ <b>Creator : [𝙃𝘼𝙇𝘽𝙀𝙍𝙏](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [𝙍𝙞𝙙𝙬𝙖𝙣 𝙕𝙚𝙪𝙨 𝙋𝙧𝙤𝙟𝙚𝙘𝙩](https://t.me/unclesamaja)__\n\n3️⃣ <b>[{title3[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})\n ├ ☕️ <b>Creator : [𝙃𝘼𝙇𝘽𝙀𝙍𝙏](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [𝙍𝙞𝙙𝙬𝙖𝙣 𝙕𝙚𝙪𝙨 𝙋𝙧𝙤𝙟𝙚𝙘𝙩](https://t.me/unclesamaja)__\n\n4️⃣ <b>[{title4[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})\n ├ ☕️ <b>Creator : [𝙃𝘼𝙇𝘽𝙀𝙍𝙏](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [𝙍𝙞𝙙𝙬𝙖𝙣 𝙕𝙚𝙪𝙨 𝙋𝙧𝙤𝙟𝙚𝙘𝙩](https://t.me/unclesamaja)__\n\n5️⃣ <b>[{title5[:25]}...]({url})</b>\n ├ 💡 [More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})\n ├ ☕️ <b>Creator : [𝙃𝘼𝙇𝘽𝙀𝙍𝙏](https://t.me/rdwan_13)</b>\n └ ⚡ __Powered by : [𝙍𝙞𝙙𝙬𝙖𝙣 𝙕𝙚𝙪𝙨 𝙋𝙧𝙤𝙟𝙚𝙘𝙩](https://t.me/unclesamaja)__",
             reply_markup=InlineKeyboardMarkup(buttons),
         )
 
