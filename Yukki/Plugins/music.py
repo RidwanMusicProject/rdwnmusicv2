@@ -6,14 +6,14 @@ from os import getenv, path
 
 import yt_dlp
 from pyrogram import Client, filters
-from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidde
+from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, Voice
 from pytgcalls import StreamType
 from pytgcalls.types.input_stream import InputAudioStream, InputStream
 from youtubesearchpython import VideosSearch
 
-from Yukki import ASSID, ASSNAME, ASSUSERNAME, BOT_ID, BOT_USERNAME, app
+from Yukki import ASSID, ASSNAME, ASSUSERNAME, BOT_ID, BOT_USERNAME, app, SUDOERS
 from Yukki.YukkiUtilities.database.chats import is_served_chat
 from Yukki.YukkiUtilities.database.onoff import is_on_off
 from Yukki.YukkiUtilities.database.queue import (
