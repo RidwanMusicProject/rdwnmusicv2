@@ -6,6 +6,7 @@ from os import getenv, path
 
 import yt_dlp
 from pyrogram import Client, filters
+from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidde
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, Voice
 from pytgcalls import StreamType
@@ -41,14 +42,85 @@ flex = {}
 chat_watcher_group = 3
 
 
-OWNER_NAME = getenv("OWNER_NAME")
-OWNER_USERNAME = getenv("OWNER_USERNAME")
-GROUP_FORCE_SUBCRIBE = getenv("GROUP_FORCE_SUBCRIBE")
-
-
 def time_to_seconds(time):
     stringt = str(time)
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(":"))))
+
+async def member_permissions(chat_id: int, user_id: int):
+    perms = []
+    member = await app.get_chat_member(chat_id, user_id)
+    if member.can_manage_voice_chats:
+        perms.append("can_manage_voice_chats")
+    return perms
+
+
+async def unauthorised(message):
+    chatID = message.chat.id
+    text = "**Anda harus menjadi admin untuk menggunakan perintah ini**"
+    try:
+        await message.reply_text(text)
+    except ChatWriteForbidden:
+        await app.send_messsge(chatID, "error")
+    return 1
+
+
+async def adminsOnly(permission, message):
+    chatID = message.chat.id
+    if not message.from_user:
+        if message.sender_chat:
+            return await authorised(message)
+        return await unauthorised(message)
+    userID = message.from_user.id
+    permissions = await member_permissions(chatID, userID)
+    if userID not in SUDOERS and permission not in permissions:
+        return await unauthorised(message)
+
+
+DISABLED_GROUPS = []
+useer = "NaN"
+que = {}
+
+
+@app.on_message(filters.command(["player", f"player@{BOT_USERNAME}"])& ~filters.edited & ~filters.bot & ~filters.private)
+async def music_onoff(_, message: Message):
+    permission = "can_manage_voice_chats"
+    m = await adminsOnly(permission, message)
+    if m == 1:
+        return
+    global DISABLED_GROUPS
+    try:
+        message.from_user.id
+    except:
+        return
+    if len(message.command) != 2:
+        await message.reply_text("**• usage:**\n\n `/music on` & `/music off`")
+        return
+    status = message.text.split(None, 1)[1]
+    message.chat.id
+    if status in ("ON", "on", "On"):
+        lel = await message.reply("`tunggu sebentar...`")
+        if not message.chat.id in DISABLED_GROUPS:
+            await lel.edit("» **Music Telah Aktif ✅**")
+            return
+        DISABLED_GROUPS.remove(message.chat.id)
+        await lel.edit(
+            f"**✅ Music Telah Di Diaktifkan Di {message.chat.title}**"
+        )
+
+    elif status in ("OFF", "off", "Off"):
+        lel = await message.reply("`processing...`")
+
+        if message.chat.id in DISABLED_GROUPS:
+            await lel.edit("» **Music Tidak Aktif❌.**")
+            return
+        DISABLED_GROUPS.append(message.chat.id)
+        await lel.edit(
+            f"**✅ Music Telah Di Nonaktifkan Di {message.chat.title} !**"
+        )
+    else:
+        await message.reply_text(
+            "**• Penggunaan:**\n\n `/music on` & `/music off`"
+        )
 
 
 @Client.on_message(command(["play", "play@RdwanMsic_Bot"]) & other_filters)
@@ -58,6 +130,12 @@ async def play(_, message: Message):
     user_id = message.from_user.id
     user_name = message.from_user.first_name
     rpk = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
+    global que
+    global useer
+    if chat_id in DISABLED_GROUPS:
+        return await message.reply_text(
+            f"😕 **Maaf kak {message.from_user.mention}, Musicnya sedang tidak aktif,tag Admin untuk mengaktifkan**" 
+        )
     if not await is_served_chat(chat_id):
         await message.reply_text(
             f"❌ **not in allowed chat**\n\nhalbert music is only for allowed chats. ask any sudo user to allow your chat.\n\ncheck sudo user list [From Here](https://t.me/{BOT_USERNAME}?start=sudolist)"
@@ -67,53 +145,6 @@ async def play(_, message: Message):
         return await message.reply_text(
             "you're an __Anonymous__ Admin !\n\n» revert back to user account from admin rights."
         )
-    if GROUP_FORCE_SUBCRIBE:
-        try:
-            user = await app.get_chat_member(GROUP_FORCE_SUBCRIBE, user_id)
-            if user.status == "kicked":
-                await app.send_message(
-                    chat_id,
-                    text=f"**❌ {rpk} anda telah di blokir dari grup dukungan\n\n🔻 Klik tombol dibawah untuk menghubungi admin grup**",
-                    reply_markup=InlineKeyboardMarkup(
-                        [
-                            [
-                                InlineKeyboardButton(
-                                    f"• {OWNER_NAME} •",
-                                    url=f"https://t.me/{OWNER_USERNAME}",
-                                )
-                            ]
-                        ]
-                    ),
-                    parse_mode="markdown",
-                    disable_web_page_preview=True,
-                )
-            return
-        except UserNotParticipant:
-            await app.send_message(
-                chat_id,
-                text=f"""
-**🙋🏻‍♂️ Halo {rpk}. Apa Kabar?
-
-☑️ Untuk Menggunakan Bot Anda Harus Join Di Grup Support Bot Terlebih Dahulu 
-
-🔻 Klik Tombol Dibawah Untuk Join Grup Support Bot 
-
-💡 Jika Sudah Join Silahkan Kirim Kembali** `{message.text}`
-""",
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton(
-                                "💬 Join Group Support 💬",
-                                url=f"https://t.me/{GROUP_FORCE_SUBCRIBE}",
-                            )
-                        ]
-                    ]
-                ),
-                parse_mode="markdown",
-                disable_web_page_preview=True,
-            )
-            return
     user_id = message.from_user.id
     chat_title = message.chat.title
     message.from_user.first_name
