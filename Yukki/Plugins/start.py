@@ -25,7 +25,7 @@ def start_pannel():
             ],
             [ 
                 InlineKeyboardButton(text="☕ ᴄʀᴇᴀᴛᴏʀ", url="https://t.me/rdwan_13"),
-                InlineKeyboardButton(text="💭 ꜱᴜᴘᴘᴏʀᴛ", url="https://t.me/unclesamaja1")
+                InlineKeyboardButton(text="💭 ꜱᴜᴘᴘᴏʀᴛ", url="https://t.me/anonymoustelegrm")
             ],
     ]
     return "✨  **Welcome to rdwan music project bot.**", buttons
@@ -42,7 +42,7 @@ pstart_markup=InlineKeyboardMarkup(
                         "🌵ᴄʀᴇᴀᴛᴏʀ", url="https://t.me/rdwan_13")
                 ],[
                     InlineKeyboardButton(
-                        "🌻 ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘꜱ", url="https://t.me/unclesamaja1"), 
+                        "🌻 ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘꜱ", url="https://t.me/anonymoustelegrm"), 
                     InlineKeyboardButton(
                         "🔔 ᴄʜᴀɴɴᴇʟ", url="https://t.me/unclesamaja")
                 ]
