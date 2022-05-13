@@ -21,11 +21,11 @@ from Yukki.YukkiUtilities.database.sudo import (get_sudoers, get_sudoers, remove
 def start_pannel():  
     buttons  = [
             [
-                InlineKeyboardButton(text="🚑 ᴄᴏᴍᴍᴀɴᴅꜱ", url="https://telegra.ph/RidwanMusic-12-15-2")
+                InlineKeyboardButton(text="📚 ᴄᴏᴍᴍᴀɴᴅꜱ 📚", url="https://telegra.ph/RidwanMusic-12-15-2")
             ],
             [ 
                 InlineKeyboardButton(text="☕ ᴄʀᴇᴀᴛᴏʀ", url="https://t.me/rdwan_13"),
-                InlineKeyboardButton(text="💭 ꜱᴜᴘᴘᴏʀᴛ", url="https://t.me/anonymoustelegrm")
+                InlineKeyboardButton(text="🔥 ꜱᴜᴘᴘᴏʀᴛ", url="https://t.me/anonymoustelegrm")
             ],
     ]
     return "⚡  **Welcome to rdwan music project bot.**", buttons
@@ -37,14 +37,14 @@ pstart_markup=InlineKeyboardMarkup(
                         "🔥 ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ 🔥", url="https://t.me/RdwanMsic_Bot?startgroup=true")
                 ],[
                     InlineKeyboardButton(
-                        "🚑 ᴄᴏᴍᴍᴀɴᴅꜱ", url="https://telegra.ph/RidwanMusic-12-15-2"),
+                        "📚 ᴄᴏᴍᴍᴀɴᴅꜱ 📚", url="https://telegra.ph/RidwanMusic-12-15-2"),
                     InlineKeyboardButton(
-                        "🌵ᴄʀᴇᴀᴛᴏʀ", url="https://t.me/rdwan_13")
+                        "👑 ᴄʀᴇᴀᴛᴏʀ 👑", url="https://t.me/rdwan_13")
                 ],[
                     InlineKeyboardButton(
-                        "🌻 ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘꜱ", url="https://t.me/anonymoustelegrm"), 
+                        "🔰 ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘꜱ 🔰", url="https://t.me/anonymoustelegrm"), 
                     InlineKeyboardButton(
-                        "🔔 ᴄʜᴀɴɴᴇʟ", url="https://t.me/binalhot")
+                        "🔔 ᴄʜᴀɴɴᴇʟ 🔔", url="https://t.me/binalhot")
                 ]
                 # [
                 #     InlineKeyboardButton(
