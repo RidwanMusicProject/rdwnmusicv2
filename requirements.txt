@@ -1,5 +1,5 @@
 tgcrypto
-pyrogram
+pyrogram==1.4.0
 py-tgcalls
 youtube-search-python==1.4.9
 yt-dlp==2021.11.10.1
