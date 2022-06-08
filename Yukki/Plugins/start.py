@@ -24,7 +24,7 @@ def start_pannel():
                 InlineKeyboardButton(text="📚 ᴄᴏᴍᴍᴀɴᴅꜱ 📚", url="https://telegra.ph/RidwanMusic-12-15-2")
             ],
             [ 
-                InlineKeyboardButton(text="☕ ᴄʀᴇᴀᴛᴏʀ", url="https://t.me/rdwan_13"),
+                InlineKeyboardButton(text="☕ 𝐃𝐨𝐧𝐚𝐬𝐢", url="https://t.me/rdwan13"),
                 InlineKeyboardButton(text="🔥 ꜱᴜᴘᴘᴏʀᴛ", url="https://t.me/anonymoustelegrm")
             ],
     ]
@@ -39,12 +39,12 @@ pstart_markup=InlineKeyboardMarkup(
                     InlineKeyboardButton(
                         "📚 ᴄᴏᴍᴍᴀɴᴅꜱ 📚", url="https://telegra.ph/RidwanMusic-12-15-2"),
                     InlineKeyboardButton(
-                        "👑 ᴄʀᴇᴀᴛᴏʀ 👑", url="https://t.me/rdwan_13")
+                        "👑 𝐃𝐨𝐧𝐚𝐬𝐢 👑", url="https://t.me/rdwan13")
                 ],[
                     InlineKeyboardButton(
                         "🔰 ꜱᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘꜱ 🔰", url="https://t.me/anonymoustelegrm"), 
                     InlineKeyboardButton(
-                        "🔔 ᴄʜᴀɴɴᴇʟ 🔔", url="https://t.me/binalhot")
+                        "🔔 ᴄʜᴀɴɴᴇʟ 🔔", url="https://t.me/rulesgrupp")
                 ]
                 # [
                 #     InlineKeyboardButton(
@@ -93,7 +93,7 @@ async def play(_, message: Message):
         rpk = "["+user_name+"](tg://user?id="+str(user_id)+")" 
         await app.send_message(message.chat.id,
             text=f"""👋 Welcome **{rpk}** !\n\n 
-💭 𝐈𝐧𝐢 𝐝𝐢 𝐤𝐞𝐥𝐨𝐥𝐚 𝐨𝐥𝐞𝐡 **[HALBERT](https://t.me/rdwan_13)**, 𝐝𝐚𝐧 𝐛𝐢𝐬𝐚 𝐦𝐞𝐦𝐛𝐚𝐧𝐭𝐮 𝐤𝐚𝐥𝐢𝐚𝐧 𝐮𝐧𝐭𝐮𝐤 𝐦𝐞𝐧𝐝𝐞𝐧𝐠𝐚𝐫 𝐤𝐚𝐧 𝐦𝐮𝐬𝐢𝐜 𝐦𝐞𝐥𝐚𝐥𝐮𝐢 𝐨𝐛𝐫𝐨𝐥𝐚𝐧 𝐬𝐮𝐚𝐫𝐚 𝐆𝐑𝐎𝐔𝐏 𝐭𝐞𝐥𝐞𝐠𝐫𝐚𝐦 (𝐕𝐂𝐆)
+💭 𝐈𝐧𝐢 𝐝𝐢 𝐤𝐞𝐥𝐨𝐥𝐚 𝐨𝐥𝐞𝐡 **[HALBERT](https://t.me/rdwan13)**, 𝐝𝐚𝐧 𝐛𝐢𝐬𝐚 𝐦𝐞𝐦𝐛𝐚𝐧𝐭𝐮 𝐤𝐚𝐥𝐢𝐚𝐧 𝐮𝐧𝐭𝐮𝐤 𝐦𝐞𝐧𝐝𝐞𝐧𝐠𝐚𝐫 𝐤𝐚𝐧 𝐦𝐮𝐬𝐢𝐜 𝐦𝐞𝐥𝐚𝐥𝐮𝐢 𝐨𝐛𝐫𝐨𝐥𝐚𝐧 𝐬𝐮𝐚𝐫𝐚 𝐆𝐑𝐎𝐔𝐏 𝐭𝐞𝐥𝐞𝐠𝐫𝐚𝐦 (𝐕𝐂𝐆)
             
 𝗗𝗮𝗻 𝗦𝗮𝘆𝗮 𝗠𝗲𝗺𝗶𝗹𝗶𝗸𝗶 𝗙𝗶𝘁𝘂𝗿 𝗦𝗲𝗽𝗲𝗿𝘁𝗶 :
 • 𝗠𝗲𝗻𝗰𝗮𝗿𝗶 𝗗𝗮𝗻 𝗠𝗲𝗺𝘂𝘁𝗮𝗿 𝗟𝗮𝗴𝘂 𝗬𝗮𝗻𝗴 𝗞𝗮𝗺𝘂 𝗜𝗻𝗴𝗶𝗻𝗸𝗮𝗻.
@@ -102,7 +102,7 @@ async def play(_, message: Message):
 
 🌹 𝐒𝐩𝐞𝐜𝐢𝐚𝐥 𝐓𝐡𝐚𝐧𝐤𝐬 𝐓𝐨 : **HALBERT** 🌹
 
-👑 𝐎𝐰𝐧𝐞𝐫 : **[𝐇𝐚𝐥𝐛𝐞𝐫𝐭](https://t.me/rdwan_13)**
+👑 𝐎𝐰𝐧𝐞𝐫 : **[𝐇𝐚𝐥𝐛𝐞𝐫𝐭](https://t.me/rdwan13)**
 
 🚑 CARA PENGGUNAAN BOT KLIK » **COMMANDS**
             """,
