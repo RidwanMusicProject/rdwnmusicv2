@@ -9,7 +9,7 @@ from pyrogram.types import (
 def play_markup(videoid, user_id):
     buttons= [
             [
-                InlineKeyboardButton(text="☕️𝐃𝐨𝐧𝐚𝐬𝐢☕️", url="https://t.me/rdwan13"),      
+                InlineKeyboardButton(text="𝐃𝐨𝐧𝐚𝐬𝐢 ☕🚬", url="https://t.me/rdwan13"),      
                 InlineKeyboardButton(text="𝐌𝐞𝐧𝐮 ⚙️", callback_data=f'other {videoid}|{user_id}'),
             ],                              
         ]
